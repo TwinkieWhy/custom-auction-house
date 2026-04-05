@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM Panel — Auction House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #09070500;
+      --bg:        #090705;
+      --bg-card:   #110e09;
+      --bg-input:  #17130d;
+      --gold:      #c9a227;
+      --gold-dim:  #7a6218;
+      --gold-hi:   #f0d060;
+      --text:      #ddc9a0;
+      --text-dim:  #7a6e58;
+      --text-hi:   #f5e8c8;
+      --border:    #261e12;
+      --border-hi: #3e3020;
+      --danger:    #cc3333;
+      --success:   #33aa44;
+      --common:    #9d9d9d;
+      --uncommon:  #1eff00;
+      --rare:      #0070dd;
+      --epic:      #a335ee;
+      --legendary: #ff8000;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', serif;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: linear-gradient(180deg, rgba(140,80,0,0.08) 0%, transparent 100%);
+    }
+
+    .head-left h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      color: var(--gold-hi);
+      font-weight: 700;
+    }
+
+    .head-left p {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-top: 0.15rem;
+    }
+
+    a.back-link {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      border: 1px solid var(--border-hi);
+      padding: 0.35rem 0.8rem;
+      border-radius: 2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    a.back-link:hover { color: var(--gold); border-color: var(--gold-dim); }
+
+    .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 800px) { .wrap { grid-template-columns: 1fr; } }
+
+    /* ─── Panels ─── */
+    .panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+
+    .panel-head {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-body { padding: 1rem; }
+
+    /* ─── Form ─── */
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+    .field { display: flex; flex-direction: column; gap: 0.3rem; }
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    input[type="text"], input[type="number"], textarea, select {
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'EB Garamond', serif;
+      font-size: 0.95rem;
+      padding: 0.45rem 0.6rem;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.18s;
+      width: 100%;
+    }
+
+    input:focus, textarea:focus, select:focus { border-color: var(--gold-dim); }
+    input::placeholder, textarea::placeholder { color: var(--text-dim); font-style: italic; }
+
+    textarea { resize: vertical; min-height: 70px; }
+
+    .tag-input-wrap {
+      position: relative;
+    }
+
+    .tag-input-wrap input { padding-right: 2.5rem; }
+
+    /* Image preview */
+    #imgPreview {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 2px;
+      border: 1px solid var(--border-hi);
+      background: #080604;
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    button {
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.1rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: 1px solid;
+    }
+
+    .btn-primary {
+      background: rgba(201,162,39,0.15);
+      color: var(--gold-hi);
+      border-color: var(--gold-dim);
+    }
+    .btn-primary:hover { background: rgba(201,162,39,0.25); border-color: var(--gold); }
+
+    .btn-ghost {
+      background: none;
+      color: var(--text-dim);
+      border-color: var(--border-hi);
+    }
+    .btn-ghost:hover { color: var(--text-hi); border-color: var(--border-hi); }
+
+    .btn-danger {
+      background: rgba(204,51,51,0.10);
+      color: #dd6666;
+      border-color: rgba(204,51,51,0.3);
+      font-size: 0.6rem;
+      padding: 0.3rem 0.6rem;
+    }
+    .btn-danger:hover { background: rgba(204,51,51,0.2); }
+
+    /* ─── Item list ─── */
+    #itemList { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .list-item {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 0.6rem;
+      align-items: center;
+      padding: 0.5rem;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: border-color 0.15s;
+    }
+
+    .list-item:hover { border-color: var(--border-hi); }
+
+    .list-thumb {
+      width: 48px; height: 36px;
+      object-fit: cover;
+      border-radius: 2px;
+      background: #080604;
+    }
+
+    .list-info .li-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      color: var(--text-hi);
+    }
+
+    .list-info .li-meta {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    .li-rarity {
+      display: inline-block;
+      font-size: 0.55rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+      margin-right: 0.3rem;
+      border: 1px solid;
+    }
+
+    /* ─── Export panel ─── */
+    #jsonOut {
+      min-height: 160px;
+      font-size: 0.75rem;
+      font-family: 'Courier New', monospace;
+      color: #88ccaa;
+      background: #060504;
+      border-color: var(--border-hi);
+    }
+
+    .status-bar {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.7rem;
+      border-radius: 2px;
+      margin-top: 0.6rem;
+      display: none;
+    }
+
+    .status-bar.ok  { background: rgba(51,170,68,0.12); color: #66dd77; border: 1px solid rgba(51,170,68,0.3); display: block; }
+    .status-bar.err { background: rgba(204,51,51,0.12); color: #dd6666; border: 1px solid rgba(204,51,51,0.3); display: block; }
+
+    .item-count {
+      font-family: 'Cinzel', serif;
+      font-size: 0.62rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      padding: 0.5rem 0 0.4rem;
+    }
+
+    /* Steps panel */
+    .steps { padding: 1rem; display: flex; flex-direction: column; gap: 0.8rem; }
+
+    .step {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+    }
+
+    .step-num {
+      width: 24px; height: 24px;
+      background: rgba(201,162,39,0.15);
+      border: 1px solid var(--gold-dim);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .step-text { font-size: 0.88rem; line-height: 1.5; padding-top: 0.1rem; }
+    .step-text code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: #88ccaa;
+      background: rgba(0,0,0,0.4);
+      padding: 0.1rem 0.3rem;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="head-left">
+    <h1>⚒ GM Panel — Auction House</h1>
+    <p>Add items, export JSON, then paste it into your GitHub repository.</p>
+  </div>
+  <a class="back-link" href="index.html">← View Auction House</a>
+</header>
+
+<div class="wrap">
+
+  <!-- ── Add Item Form ── -->
+  <div>
+    <div class="panel">
+      <div class="panel-head">Add / Edit Item</div>
+      <div class="panel-body">
+        <div class="form-grid">
+
+          <div class="field full">
+            <label>Item Name *</label>
+            <input type="text" id="f-name" placeholder="e.g. Sword of Dawn">
+          </div>
+
+          <div class="field">
+            <label>Rarity *</label>
+            <select id="f-rarity">
+              <option value="common">Common</option>
+              <option value="uncommon">Uncommon</option>
+              <option value="rare">Rare</option>
+              <option value="epic">Epic</option>
+              <option value="legendary">Legendary</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Seller Name</label>
+            <input type="text" id="f-seller" placeholder="e.g. Merchant Aldric">
+          </div>
+
+          <div class="field">
+            <label>Price *</label>
+            <input type="number" id="f-price" placeholder="e.g. 500" min="0">
+          </div>
+
+          <div class="field">
+            <label>Currency</label>
+            <input type="text" id="f-currency" placeholder="gp" value="gp">
+          </div>
+
+          <div class="field full">
+            <label>Image URL or Path</label>
+            <input type="text" id="f-image" placeholder="images/my-item.png  or  https://…">
+            <img id="imgPreview" src="https://placehold.co/400x120/110e09/261e12?text=Preview" alt="preview">
+            <span class="hint">For local images, upload to the <code>images/</code> folder in your repo and enter the filename like <code>images/sword.png</code></span>
+          </div>
+
+          <div class="field full">
+            <label>Tags (comma-separated)</label>
+            <input type="text" id="f-tags" placeholder="weapon, sword, fire, magic, one-handed">
+          </div>
+
+          <div class="field full">
+            <label>Description</label>
+            <textarea id="f-desc" placeholder="Flavour text describing the item…"></textarea>
+          </div>
+
+          <div class="field full">
+            <label>Stats / Properties</label>
+            <textarea id="f-stats" placeholder="+1 to attack · 1d6 fire damage on hit" style="min-height:50px"></textarea>
+          </div>
+
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-primary" id="addBtn">＋ Add to List</button>
+          <button class="btn-ghost" id="clearFormBtn">✕ Clear Form</button>
+        </div>
+
+        <div class="status-bar" id="formStatus"></div>
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="panel" style="margin-top:1rem">
+      <div class="panel-head">How to Publish</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text">Add all your items using the form above. They appear in the list on the right.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text">Click <strong>Copy JSON</strong> or <strong>Download</strong> to get your <code>items.json</code> file.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text">In your GitHub repo, open <code>items.json</code> and paste the contents (or upload the downloaded file).</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">Upload item images into the <code>images/</code> folder in your repo. Reference them as <code>images/filename.png</code>.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-text">Commit and push. Your GitHub Pages site will update within a minute.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Right column ── -->
+  <div>
+
+    <!-- Item list -->
+    <div class="panel">
+      <div class="panel-head">Current Item List</div>
+      <div class="panel-body">
+        <div class="item-count" id="itemCountEl">0 items</div>
+        <div id="itemList"></div>
+
+        <div class="btn-row" style="margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid var(--border)">
+          <button class="btn-ghost" id="loadFromJson">↑ Load from items.json</button>
+          <button class="btn-ghost" id="clearListBtn">✕ Clear All Items</button>
+        </div>
+        <div class="status-bar" id="listStatus"></div>
+      </div>
+    </div>
+
+    <!-- Export -->
+    <div class="panel" style="margin-top:1rem">
+      <div class="panel-head">Export JSON</div>
+      <div class="panel-body">
+        <textarea id="jsonOut" readonly placeholder="Your items.json will appear here after you add items…"></textarea>
+        <div class="btn-row">
+          <button class="btn-primary" id="copyBtn">⎘ Copy JSON</button>
+          <button class="btn-ghost" id="downloadBtn">↓ Download items.json</button>
+        </div>
+        <div class="status-bar" id="copyStatus"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  let itemList = [];
+  let nextId = 100;
+
+  /* ─── Image preview ─── */
+  document.getElementById('f-image').addEventListener('input', function() {
+    const src = this.value.trim();
+    document.getElementById('imgPreview').src = src || 'https://placehold.co/400x120/110e09/261e12?text=Preview';
+  });
+
+  /* ─── Add item ─── */
+  document.getElementById('addBtn').addEventListener('click', () => {
+    const name = document.getElementById('f-name').value.trim();
+    const price = parseFloat(document.getElementById('f-price').value);
+
+    if (!name) return showStatus('formStatus', 'err', 'Item name is required.');
+    if (isNaN(price) || price < 0) return showStatus('formStatus', 'err', 'Please enter a valid price.');
+
+    const tags = document.getElementById('f-tags').value
+      .split(',').map(t => t.trim()).filter(Boolean);
+
+    const item = {
+      id: nextId++,
+      name,
+      rarity:      document.getElementById('f-rarity').value,
+      price,
+      currency:    document.getElementById('f-currency').value.trim() || 'gp',
+      seller:      document.getElementById('f-seller').value.trim(),
+      image:       document.getElementById('f-image').value.trim(),
+      tags,
+      description: document.getElementById('f-desc').value.trim(),
+      stats:       document.getElementById('f-stats').value.trim(),
+    };
+
+    itemList.push(item);
+    refreshList();
+    refreshExport();
+    clearForm();
+    showStatus('formStatus', 'ok', `"${item.name}" added! (${itemList.length} total)`);
+  });
+
+  document.getElementById('clearFormBtn').addEventListener('click', clearForm);
+
+  /* ─── List rendering ─── */
+  function refreshList() {
+    const el = document.getElementById('itemList');
+    const countEl = document.getElementById('itemCountEl');
+    countEl.textContent = `${itemList.length} item${itemList.length !== 1 ? 's' : ''}`;
+    el.innerHTML = '';
+
+    if (!itemList.length) {
+      el.innerHTML = '<p style="color:var(--text-dim);font-style:italic;font-size:0.85rem">No items yet. Add some above.</p>';
+      return;
+    }
+
+    itemList.forEach(it => {
+      const row = document.createElement('div');
+      row.className = 'list-item';
+      row.innerHTML = `
+        <img class="list-thumb" src="${esc(it.image||'')}" alt=""
+             onerror="this.src='https://placehold.co/48x36/110e09/261e12?text=?'">
+        <div class="list-info">
+          <div class="li-name">
+            <span class="li-rarity" style="color:var(--${it.rarity});border-color:var(--${it.rarity})">${it.rarity}</span>
+            ${esc(it.name)}
+          </div>
+          <div class="li-meta">${it.price.toLocaleString()} ${esc(it.currency||'gp')} · ${esc(it.seller||'Unknown')}</div>
+        </div>
+        <button class="btn-danger" data-id="${it.id}">✕</button>`;
+      row.querySelector('button').addEventListener('click', e => {
+        const id = parseInt(e.target.dataset.id);
+        itemList = itemList.filter(i => i.id !== id);
+        refreshList();
+        refreshExport();
+      });
+      el.appendChild(row);
+    });
+  }
+
+  /* ─── Export ─── */
+  function refreshExport() {
+    document.getElementById('jsonOut').value = JSON.stringify(itemList, null, 2);
+  }
+
+  document.getElementById('copyBtn').addEventListener('click', () => {
+    const text = document.getElementById('jsonOut').value;
+    if (!text) return showStatus('copyStatus','err','Nothing to copy yet.');
+    navigator.clipboard.writeText(text).then(() => {
+      showStatus('copyStatus','ok','Copied! Now paste into items.json on GitHub.');
+    });
+  });
+
+  document.getElementById('downloadBtn').addEventListener('click', () => {
+    const text = document.getElementById('jsonOut').value;
+    if (!text) return showStatus('copyStatus','err','Nothing to download yet.');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], {type:'application/json'}));
+    a.download = 'items.json';
+    a.click();
+  });
+
+  /* ─── Load from existing items.json ─── */
+  document.getElementById('loadFromJson').addEventListener('click', () => {
+    fetch('items.json')
+      .then(r => r.json())
+      .then(data => {
+        if (!Array.isArray(data)) throw new Error('Not an array');
+        itemList = data;
+        nextId = Math.max(...data.map(i => (i.id||0)), nextId) + 1;
+        refreshList();
+        refreshExport();
+        showStatus('listStatus','ok',`Loaded ${data.length} items from items.json.`);
+      })
+      .catch(() => showStatus('listStatus','err','Could not load items.json. This works when served via a local server or GitHub Pages.'));
+  });
+
+  document.getElementById('clearListBtn').addEventListener('click', () => {
+    if (itemList.length && !confirm('Remove all items from the list?')) return;
+    itemList = [];
+    refreshList();
+    refreshExport();
+  });
+
+  /* ─── Helpers ─── */
+  function clearForm() {
+    ['f-name','f-seller','f-image','f-tags','f-desc','f-stats'].forEach(id => document.getElementById(id).value = '');
+    document.getElementById('f-price').value = '';
+    document.getElementById('f-currency').value = 'gp';
+    document.getElementById('f-rarity').value = 'common';
+    document.getElementById('imgPreview').src = 'https://placehold.co/400x120/110e09/261e12?text=Preview';
+  }
+
+  function showStatus(id, type, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.className = `status-bar ${type}`;
+    setTimeout(() => { el.className = 'status-bar'; }, 4000);
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* Init */
+  refreshList();
+</script>
+</body>
+</html>
