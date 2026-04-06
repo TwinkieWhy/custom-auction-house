@@ -497,6 +497,10 @@
     .modal-footer {
       padding-top: 0.75rem;
       border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
     }
 
     .modal-price {
@@ -522,6 +526,23 @@
     }
 
     .close-btn:hover { color: var(--text-bright); border-color: var(--gold-dim); }
+
+    .copy-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.32rem 0.75rem;
+      border-radius: 2px;
+      cursor: pointer;
+      border: 1px solid var(--gold-dim);
+      color: var(--gold);
+      background: rgba(201,162,39,0.08);
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+    }
+
+    .copy-btn:hover { background: rgba(201,162,39,0.18); border-color: var(--gold); }
+    .copy-btn.copied { color: #66dd77; border-color: #33aa44; background: rgba(51,170,68,0.12); }
 
     /* ─── Responsive ─── */
     @media (max-width: 720px) {
@@ -604,7 +625,7 @@
   let activeTypes    = new Set();   // empty = all
 
   /* ── Bootstrap ── */
-  fetch('items.json')
+  fetch('items.json?v=' + Date.now())
     .then(r => { if (!r.ok) throw new Error(r.statusText); return r.json(); })
     .then(data => { items = data; buildSidebar(); render(); })
     .catch(() => {
@@ -745,16 +766,28 @@
       </div>
       <div class="modal-info-col">
         <button class="close-btn" id="closeBtn">✕</button>
+        <div class="modal-badges">${clsBadge}${typeBadge}${subBadge}</div>
         <div class="modal-rarity" style="color:var(--${rar})">${rar.toUpperCase()}</div>
         <div class="modal-name">${esc(it.name)}</div>
-        <div class="modal-badges">${clsBadge}${typeBadge}${subBadge}</div>
         <div class="modal-desc">${esc(it.description||'No description available.')}</div>
         <div class="modal-footer">
           <div class="modal-price">${esc(it.price||'—')}</div>
+          <button class="copy-btn" id="copyBtn" title="Copy item details">⎘ Copy</button>
         </div>
       </div>`;
 
     document.getElementById('closeBtn').addEventListener('click', closeModal);
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const desc = (it.description || '').replace(/\n/g, ', ');
+      const text = `${rar.toUpperCase()}\n${it.name}\n${it.price||'—'}\n${desc}`.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = '✓ Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '⎘ Copy'; btn.classList.remove('copied'); }, 2000);
+      });
+    });
     document.getElementById('backdrop').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
