@@ -418,5 +418,41 @@
     "seller": "",
     "image": "images/god_warrior_cape.png",
     "description": "97 str\n1885 atk"
-  }
+  },
+  {
+    "id": 135,
+    "name": "Princess No's Floral Jewel'",
+    "rarity": "vvvvip",
+    "class": "Archer",
+    "itemType": "Weapon",
+    "subType": "Secondary",
+    "price": "30t",
+    "seller": "",
+    "image": "images/135.png",
+    "description": "926 dex, 1795 atk"
+  },
+  {
+    "id": 136,
+    "name": "Eternal Thief Shoes",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "25t",
+    "seller": "",
+    "image": "images/136.png",
+    "description": "1051 luk, 1788 atk"
+  },
+  {
+    "id": 137,
+    "name": "Destiny Saber",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "20t",
+    "seller": "",
+    "image": "images/137.png",
+    "description": "743 str, +1606 atk roll"
+  },
 ]
