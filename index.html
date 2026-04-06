@@ -8,11 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:          #08060400;
-      --bg-base:     #09070500;
-      --bg-card:     #110e0900;
-      --bg-panel:    #0c0a0700;
-      --bg-input:    #17130d00;
+      --bg-base:     #090705;
+      --bg-card:     #110e09;
+      --bg-panel:    #0c0a07;
+      --bg-input:    #17130d;
       --gold:        #c9a227;
       --gold-dim:    #7a6218;
       --gold-bright: #f0d060;
@@ -22,27 +21,32 @@
       --border:      #261e12;
       --border-hi:   #3e3020;
 
-      --vip:     #00bfff;
-      --vvip:    #bf00ff;
-      --vvvip:   #ff2299;
-      --vvvvip:  #ff8800;
-      --god:     #ffd700;
+      /* Rarity colours */
+      --vip:    #00bfff;
+      --vvip:   #bf00ff;
+      --vvvip:  #ff2299;
+      --vvvvip: #ff8800;
+      --god:    #ffd700;
+
+      /* Class colours */
+      --cls-warrior: #e03030;
+      --cls-mage:    #3080e0;
+      --cls-thief:   #9030c0;
+      --cls-archer:  #30a040;
+      --cls-pirate:  #808080;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      background-color: #09070500;
-      background-color: #090705;
+      background-color: var(--bg-base);
       color: var(--text);
       font-family: 'EB Garamond', serif;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Ambient background */
     body::before {
       content: '';
       position: fixed;
@@ -54,7 +58,6 @@
       z-index: 0;
     }
 
-    /* Subtle crosshatch texture */
     body::after {
       content: '';
       position: fixed;
@@ -141,8 +144,7 @@
       display: block;
     }
 
-    /* Search */
-    input[type="text"], input[type="number"] {
+    input[type="text"] {
       background: var(--bg-input);
       border: 1px solid var(--border);
       color: var(--text);
@@ -182,16 +184,9 @@
       transition: background 0.15s, border-color 0.15s;
     }
 
-    .rarity-row input:checked ~ .check-box {
-      background: var(--gold);
-      border-color: var(--gold);
-    }
+    .rarity-row input:checked ~ .check-box { background: var(--gold); border-color: var(--gold); }
 
-    .check-box::after {
-      content: '';
-      width: 6px; height: 6px;
-      display: none;
-    }
+    .check-box::after { content: ''; width: 6px; height: 6px; display: none; }
 
     .rarity-row input:checked ~ .check-box::after {
       display: block;
@@ -200,20 +195,16 @@
       transform: rotate(45deg) translateY(-1px);
     }
 
-    .rarity-gem {
-      width: 9px; height: 9px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+    .rarity-gem { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 
-    /* Tag pills */
-    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    /* Filter pills (class, itemtype) */
+    .pill-cloud { display: flex; flex-wrap: wrap; gap: 0.3rem; }
 
-    .tag-pill {
+    .filter-pill {
       font-family: 'Cinzel', serif;
       font-size: 0.6rem;
       letter-spacing: 0.06em;
-      padding: 0.18rem 0.5rem;
+      padding: 0.2rem 0.55rem;
       border: 1px solid var(--border-hi);
       border-radius: 2px;
       color: var(--text-dim);
@@ -223,11 +214,15 @@
       transition: color 0.15s, border-color 0.15s, background 0.15s;
     }
 
-    .tag-pill:hover { color: var(--text); border-color: var(--gold-dim); }
-    .tag-pill.on { color: var(--gold); border-color: var(--gold); background: rgba(201,162,39,0.10); }
+    .filter-pill:hover { color: var(--text); border-color: var(--gold-dim); }
+    .filter-pill.on { color: var(--gold); border-color: var(--gold); background: rgba(201,162,39,0.10); }
 
-    /* Price inputs */
-    .price-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+    /* Coloured class pills */
+    .filter-pill.cls-warrior.on { color: var(--cls-warrior); border-color: var(--cls-warrior); background: rgba(224,48,48,0.10); }
+    .filter-pill.cls-mage.on    { color: var(--cls-mage);    border-color: var(--cls-mage);    background: rgba(48,128,224,0.10); }
+    .filter-pill.cls-thief.on   { color: var(--cls-thief);   border-color: var(--cls-thief);   background: rgba(144,48,192,0.10); }
+    .filter-pill.cls-archer.on  { color: var(--cls-archer);  border-color: var(--cls-archer);  background: rgba(48,160,64,0.10); }
+    .filter-pill.cls-pirate.on  { color: var(--cls-pirate);  border-color: var(--cls-pirate);  background: rgba(128,128,128,0.10); }
 
     /* Clear button */
     button.clear-all {
@@ -253,12 +248,9 @@
     .toolbar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
       margin-bottom: 1rem;
       padding-bottom: 0.9rem;
       border-bottom: 1px solid var(--border);
-      gap: 1rem;
-      flex-wrap: wrap;
     }
 
     .count {
@@ -267,23 +259,10 @@
       font-style: italic;
     }
 
-    select {
-      background: var(--bg-input);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-family: 'Cinzel', serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      padding: 0.38rem 0.7rem;
-      border-radius: 2px;
-      cursor: pointer;
-      outline: none;
-    }
-
     /* ─── Item grid ─── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 1rem;
     }
 
@@ -294,7 +273,7 @@
       border-radius: 2px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      transition: box-shadow 0.2s, border-color 0.2s;
       animation: rise 0.3s both;
     }
 
@@ -303,23 +282,23 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .card:hover { transform: translateY(-3px); }
+    .card.vip:hover    { border-color: var(--vip);    box-shadow: 0 8px 28px rgba(0,191,255,0.18); }
+    .card.vvip:hover   { border-color: var(--vvip);   box-shadow: 0 8px 28px rgba(191,0,255,0.18); }
+    .card.vvvip:hover  { border-color: var(--vvvip);  box-shadow: 0 8px 28px rgba(255,34,153,0.18); }
+    .card.vvvvip:hover { border-color: var(--vvvvip); box-shadow: 0 8px 28px rgba(255,136,0,0.20); }
+    .card.god:hover    { border-color: var(--god);    box-shadow: 0 8px 34px rgba(255,215,0,0.30); }
 
-    .card.vip      { border-color: rgba(0,191,255,0.25); }
-    .card.vip:hover      { border-color: var(--vip);     box-shadow: 0 8px 28px rgba(0,191,255,0.15); }
-    .card.vvip     { border-color: rgba(191,0,255,0.28); }
-    .card.vvip:hover     { border-color: var(--vvip);    box-shadow: 0 8px 28px rgba(191,0,255,0.16); }
-    .card.vvvip    { border-color: rgba(255,34,153,0.28); }
-    .card.vvvip:hover    { border-color: var(--vvvip);   box-shadow: 0 8px 28px rgba(255,34,153,0.16); }
-    .card.vvvvip   { border-color: rgba(255,136,0,0.32); }
-    .card.vvvvip:hover   { border-color: var(--vvvvip);  box-shadow: 0 8px 28px rgba(255,136,0,0.18); }
-    .card.god      { border-color: rgba(255,215,0,0.40); }
-    .card.god:hover      { border-color: var(--god);     box-shadow: 0 8px 32px rgba(255,215,0,0.28); }
+    /* Resting rarity border tint */
+    .card.vip    { border-color: rgba(0,191,255,0.22); }
+    .card.vvip   { border-color: rgba(191,0,255,0.25); }
+    .card.vvvip  { border-color: rgba(255,34,153,0.25); }
+    .card.vvvvip { border-color: rgba(255,136,0,0.28); }
+    .card.god    { border-color: rgba(255,215,0,0.35); }
 
-    /* Image wrapper */
+    /* Image wrapper — 2:3 portrait ratio */
     .thumb {
       position: relative;
-      padding-top: 68%;
+      padding-top: 150%;
       background: #080604;
       overflow: hidden;
     }
@@ -329,64 +308,69 @@
       inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      transition: transform 0.35s;
+      object-position: center top;
     }
 
-    .card:hover .thumb img { transform: scale(1.05); }
-
+    /* Rarity badge — solid dark background for readability */
     .rarity-badge {
       position: absolute;
       top: 7px; right: 7px;
       font-family: 'Cinzel', serif;
-      font-size: 0.55rem;
+      font-size: 0.52rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       padding: 0.18rem 0.45rem;
       border-radius: 2px;
-      backdrop-filter: blur(6px);
       border: 1px solid;
+      background: rgba(5,3,2,0.82);
     }
 
-    .rarity-badge.common    { color: var(--common);    border-color: var(--common);    background: rgba(0,0,0,0.55); }
-    .rarity-badge.uncommon  { color: var(--uncommon);  border-color: var(--uncommon);  background: rgba(0,0,0,0.55); }
-    .rarity-badge.rare      { color: var(--rare);      border-color: var(--rare);      background: rgba(0,0,0,0.55); }
-    .rarity-badge.epic      { color: var(--epic);      border-color: var(--epic);      background: rgba(0,0,0,0.55); }
-    .rarity-badge.legendary { color: var(--legendary); border-color: var(--legendary); background: rgba(0,0,0,0.55); }
+    .rarity-badge.vip    { color: var(--vip);    border-color: rgba(0,191,255,0.6); }
+    .rarity-badge.vvip   { color: var(--vvip);   border-color: rgba(191,0,255,0.6); }
+    .rarity-badge.vvvip  { color: var(--vvvip);  border-color: rgba(255,34,153,0.6); }
+    .rarity-badge.vvvvip { color: var(--vvvvip); border-color: rgba(255,136,0,0.6); }
+    .rarity-badge.god    { color: var(--god);    border-color: rgba(255,215,0,0.6); }
 
     /* Card body */
-    .card-body { padding: 0.75rem; }
+    .card-body { padding: 0.65rem 0.75rem 0.75rem; }
 
     .card-name {
       font-family: 'Cinzel', serif;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-bright);
       line-height: 1.2;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.45rem;
     }
 
-    .card-seller {
-      font-size: 0.72rem;
-      color: var(--text-dim);
-      font-style: italic;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-tags {
+    /* Badges row — class + subtype */
+    .card-badges {
       display: flex;
       flex-wrap: wrap;
       gap: 0.22rem;
-      margin-bottom: 0.55rem;
+      margin-bottom: 0.5rem;
     }
 
-    .ctag {
+    .badge {
       font-family: 'Cinzel', serif;
-      font-size: 0.55rem;
-      letter-spacing: 0.05em;
-      padding: 0.1rem 0.35rem;
-      border: 1px solid var(--border-hi);
+      font-size: 0.52rem;
+      letter-spacing: 0.06em;
+      padding: 0.12rem 0.38rem;
+      border: 1px solid;
       border-radius: 2px;
+    }
+
+    /* Class badge colours */
+    .badge-class.warrior { color: var(--cls-warrior); border-color: rgba(224,48,48,0.45);   background: rgba(224,48,48,0.08); }
+    .badge-class.mage    { color: var(--cls-mage);    border-color: rgba(48,128,224,0.45);  background: rgba(48,128,224,0.08); }
+    .badge-class.thief   { color: var(--cls-thief);   border-color: rgba(144,48,192,0.45);  background: rgba(144,48,192,0.08); }
+    .badge-class.archer  { color: var(--cls-archer);  border-color: rgba(48,160,64,0.45);   background: rgba(48,160,64,0.08); }
+    .badge-class.pirate  { color: var(--cls-pirate);  border-color: rgba(128,128,128,0.45); background: rgba(128,128,128,0.08); }
+
+    /* Subtype badge */
+    .badge-subtype {
       color: var(--text-dim);
+      border-color: var(--border-hi);
       background: rgba(255,255,255,0.03);
     }
 
@@ -394,21 +378,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-top: 0.5rem;
+      padding-top: 0.45rem;
       border-top: 1px solid var(--border);
     }
 
     .price {
       font-family: 'Cinzel', serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--gold);
-    }
-
-    .price .curr {
-      font-size: 0.65rem;
-      color: var(--gold-dim);
-      margin-left: 0.15rem;
     }
 
     /* ─── Empty state ─── */
@@ -445,7 +423,7 @@
     .modal {
       background: var(--bg-card);
       border: 1px solid var(--border-hi);
-      max-width: 580px;
+      max-width: 480px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
@@ -454,6 +432,8 @@
       animation: popIn 0.22s cubic-bezier(0.34,1.4,0.64,1) both;
       scrollbar-width: thin;
       scrollbar-color: var(--border-hi) transparent;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
 
     @keyframes popIn {
@@ -461,109 +441,81 @@
       to   { opacity: 1; transform: scale(1); }
     }
 
-    .modal-hero {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      display: block;
+    /* Modal: left column = portrait image, right = details */
+    .modal-img-col {
+      position: relative;
+      background: #060402;
     }
 
-    .modal-body { padding: 1.4rem; }
+    .modal-img-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      min-height: 320px;
+    }
+
+    .modal-info-col {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      overflow-y: auto;
+    }
 
     .modal-rarity {
       font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      margin-bottom: 0.3rem;
     }
 
     .modal-name {
       font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-size: clamp(0.9rem, 2.5vw, 1.2rem);
       color: var(--text-bright);
       line-height: 1.15;
-      margin-bottom: 0.2rem;
     }
 
-    .modal-seller {
-      font-size: 0.82rem;
-      color: var(--text-dim);
-      font-style: italic;
-      margin-bottom: 1.1rem;
+    .modal-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
     }
 
     .modal-desc {
-      font-size: 0.98rem;
-      line-height: 1.75;
+      font-size: 0.9rem;
+      line-height: 1.7;
       color: var(--text);
       font-style: italic;
       border-left: 2px solid var(--gold-dim);
-      padding-left: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .modal-stats {
-      background: rgba(201,162,39,0.05);
-      border: 1px solid var(--border-hi);
-      padding: 0.7rem 1rem;
-      margin-bottom: 1rem;
-      border-radius: 2px;
-    }
-
-    .stats-label {
-      font-family: 'Cinzel', serif;
-      font-size: 0.58rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.35rem;
-    }
-
-    .stats-text {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--text);
-    }
-
-    .modal-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-      margin-bottom: 1.1rem;
+      padding-left: 0.75rem;
+      flex: 1;
     }
 
     .modal-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 1rem;
+      padding-top: 0.75rem;
       border-top: 1px solid var(--border);
     }
 
     .modal-price {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--gold);
-    }
-
-    .modal-price .curr {
-      font-size: 0.65rem;
-      color: var(--gold-dim);
-      margin-left: 0.2rem;
     }
 
     .close-btn {
       position: absolute;
-      top: 0.6rem; right: 0.6rem;
-      background: rgba(0,0,0,0.65);
+      top: 0.5rem; right: 0.5rem;
+      background: rgba(0,0,0,0.75);
       border: 1px solid var(--border-hi);
       color: var(--text-dim);
-      width: 28px; height: 28px;
+      width: 26px; height: 26px;
       display: grid;
       place-items: center;
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       border-radius: 2px;
       z-index: 10;
       transition: color 0.15s, border-color 0.15s;
@@ -575,6 +527,8 @@
     @media (max-width: 720px) {
       .layout { grid-template-columns: 1fr; }
       aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+      .modal { grid-template-columns: 1fr; }
+      .modal-img-col img { min-height: 220px; max-height: 260px; }
     }
   </style>
 </head>
@@ -602,8 +556,13 @@
     </div>
 
     <div class="filter-block">
-      <span class="filter-label">Tags</span>
-      <div class="tag-cloud" id="tagPanel"></div>
+      <span class="filter-label">Class</span>
+      <div class="pill-cloud" id="classPanel"></div>
+    </div>
+
+    <div class="filter-block">
+      <span class="filter-label">Item Type</span>
+      <div class="pill-cloud" id="typePanel"></div>
     </div>
 
     <button class="clear-all" id="clearBtn">✕ &nbsp; Clear All Filters</button>
@@ -614,15 +573,7 @@
   <main>
     <div class="toolbar">
       <span class="count" id="countEl">Loading wares…</span>
-      <select id="sortSel">
-        <option value="">Sort: Default</option>
-        <option value="price-asc">Price: Low → High</option>
-        <option value="price-desc">Price: High → Low</option>
-        <option value="name">Name A–Z</option>
-        <option value="rarity">Rarity: Best First</option>
-      </select>
     </div>
-
     <div class="grid" id="grid"></div>
   </main>
 
@@ -630,18 +581,27 @@
 
 <!-- ── Modal ── -->
 <div class="backdrop" id="backdrop">
-  <div class="modal" id="modal">
-    <button class="close-btn" id="closeBtn">✕</button>
-  </div>
+  <div class="modal" id="modal"></div>
 </div>
 
 <script>
-  const RARITIES = ['god','vvvvip','vvvip','vvip','vip'];
-  const RARITY_RANK = {god:0, vvvvip:1, vvvip:2, vvip:3, vip:4};
+  const RARITIES     = ['god','vvvvip','vvvip','vvip','vip'];
+  const RARITY_RANK  = {god:0, vvvvip:1, vvvip:2, vvip:3, vip:4};
 
-  let items = [];
-  let activeTags = new Set();
+  const CLASSES      = ['Warrior','Mage','Thief','Archer','Pirate'];
+  const CLASS_CSS    = {warrior:'warrior', mage:'mage', thief:'thief', archer:'archer', pirate:'pirate'};
+
+  const ITEM_TYPES   = ['Armor','Weapon','Emblem'];
+  const TYPE_SUBS    = {
+    armor:  ['Hat','Top','Pants','Cape','Glove','Shoe'],
+    weapon: ['Primary','Secondary'],
+    emblem: ['Mitras']
+  };
+
+  let items          = [];
   let activeRarities = new Set(RARITIES);
+  let activeClasses  = new Set();   // empty = all
+  let activeTypes    = new Set();   // empty = all
 
   /* ── Bootstrap ── */
   fetch('items.json')
@@ -651,7 +611,7 @@
       document.getElementById('countEl').textContent = '⚠ Could not load items.json';
     });
 
-  /* ── Sidebar construction ── */
+  /* ── Sidebar ── */
   function buildSidebar() {
     /* Rarity checkboxes */
     const rp = document.getElementById('rarityPanel');
@@ -662,7 +622,7 @@
         <input type="checkbox" checked data-r="${r}">
         <span class="check-box"></span>
         <span class="rarity-gem" style="background:var(--${r})"></span>
-        <span style="color:var(--${r})">${cap(r)}</span>`;
+        <span style="color:var(--${r})">${r.toUpperCase()}</span>`;
       lbl.querySelector('input').addEventListener('change', e => {
         e.target.checked ? activeRarities.add(r) : activeRarities.delete(r);
         render();
@@ -670,54 +630,64 @@
       rp.appendChild(lbl);
     });
 
-    /* Tag pills */
-    const allTags = [...new Set(items.flatMap(i => i.tags || []))].sort();
-    const tp = document.getElementById('tagPanel');
-    allTags.forEach(t => {
+    /* Class pills */
+    const cp = document.getElementById('classPanel');
+    CLASSES.forEach(cls => {
+      const key = cls.toLowerCase();
       const el = document.createElement('span');
-      el.className = 'tag-pill';
-      el.textContent = t;
+      el.className = `filter-pill cls-${key}`;
+      el.textContent = cls;
+      el.dataset.cls = key;
       el.addEventListener('click', () => {
-        el.classList.toggle('on');
-        activeTags.has(t) ? activeTags.delete(t) : activeTags.add(t);
+        const active = el.classList.toggle('on');
+        active ? activeClasses.add(key) : activeClasses.delete(key);
+        render();
+      });
+      cp.appendChild(el);
+    });
+
+    /* Item type pills */
+    const tp = document.getElementById('typePanel');
+    ITEM_TYPES.forEach(type => {
+      const key = type.toLowerCase();
+      const el = document.createElement('span');
+      el.className = 'filter-pill';
+      el.textContent = type;
+      el.dataset.type = key;
+      el.addEventListener('click', () => {
+        const active = el.classList.toggle('on');
+        active ? activeTypes.add(key) : activeTypes.delete(key);
         render();
       });
       tp.appendChild(el);
     });
 
-    /* Live listeners */
+    /* Global listeners */
     document.getElementById('q').addEventListener('input', render);
-    document.getElementById('sortSel').addEventListener('change', render);
     document.getElementById('clearBtn').addEventListener('click', clearAll);
-    document.getElementById('closeBtn').addEventListener('click', closeModal);
     document.getElementById('backdrop').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   }
 
-  /* ── Filtering & sorting ── */
+  /* ── Filter + sort ── */
   function filtered() {
-    const q    = document.getElementById('q').value.trim().toLowerCase();
-    const sort = document.getElementById('sortSel').value;
+    const q = document.getElementById('q').value.trim().toLowerCase();
 
-    let list = items.filter(it => {
-      if (!activeRarities.has(it.rarity)) return false;
-      if (activeTags.size && ![...activeTags].every(t => (it.tags||[]).includes(t))) return false;
-      if (q && !it.name.toLowerCase().includes(q) && !(it.description||'').toLowerCase().includes(q)) return false;
-      return true;
-    });
-
-    if (sort === 'price-asc')  list.sort((a,b) => String(a.price).localeCompare(String(b.price)));
-    if (sort === 'price-desc') list.sort((a,b) => String(b.price).localeCompare(String(a.price)));
-    if (sort === 'name')       list.sort((a,b) => a.name.localeCompare(b.name));
-    if (sort === 'rarity')     list.sort((a,b) => (RARITY_RANK[a.rarity]??9) - (RARITY_RANK[b.rarity]??9));
-
-    return list;
+    return items
+      .filter(it => {
+        if (!activeRarities.has((it.rarity||'').toLowerCase())) return false;
+        if (activeClasses.size && !activeClasses.has((it.class||'').toLowerCase())) return false;
+        if (activeTypes.size  && !activeTypes.has((it.itemType||'').toLowerCase()))  return false;
+        if (q && !it.name.toLowerCase().includes(q) && !(it.description||'').toLowerCase().includes(q)) return false;
+        return true;
+      })
+      .sort((a, b) => (RARITY_RANK[a.rarity]??9) - (RARITY_RANK[b.rarity]??9));
   }
 
   /* ── Render grid ── */
   function render() {
-    const list = filtered();
-    const grid = document.getElementById('grid');
+    const list  = filtered();
+    const grid  = document.getElementById('grid');
     const count = document.getElementById('countEl');
     count.textContent = `${list.length} item${list.length !== 1 ? 's' : ''} available`;
     grid.innerHTML = '';
@@ -728,21 +698,27 @@
     }
 
     list.forEach((it, i) => {
-      const card = document.createElement('div');
-      card.className = `card ${it.rarity}`;
+      const rar   = (it.rarity  || '').toLowerCase();
+      const cls   = (it.class   || '').toLowerCase();
+      const sub   = it.subType  || '';
+      const card  = document.createElement('div');
+      card.className = `card ${rar}`;
       card.style.animationDelay = `${Math.min(i * 0.035, 0.4)}s`;
-      const tagsHtml = (it.tags||[]).slice(0,4).map(t => `<span class="ctag">${t}</span>`).join('');
+
+      const clsBadge = cls ? `<span class="badge badge-class ${cls}">${esc(it.class)}</span>` : '';
+      const subBadge = sub ? `<span class="badge badge-subtype">${esc(sub)}</span>` : '';
+
       card.innerHTML = `
         <div class="thumb">
-          <img src="${it.image}" alt="${esc(it.name)}" loading="lazy"
-               onerror="this.src='https://placehold.co/400x280/110e09/261e12?text=No+Image'">
-          <span class="rarity-badge ${it.rarity}">${it.rarity.toUpperCase()}</span>
+          <img src="${esc(it.image||'')}" alt="${esc(it.name)}" loading="lazy"
+               onerror="this.src='https://placehold.co/300x450/110e09/261e12?text=No+Image'">
+          <span class="rarity-badge ${rar}">${rar.toUpperCase()}</span>
         </div>
         <div class="card-body">
           <div class="card-name">${esc(it.name)}</div>
-          <div class="card-tags">${tagsHtml}</div>
+          <div class="card-badges">${clsBadge}${subBadge}</div>
           <div class="card-footer">
-            <div class="price">${esc(it.price)}</div>
+            <div class="price">${esc(it.price||'—')}</div>
           </div>
         </div>`;
       card.addEventListener('click', () => openModal(it));
@@ -753,19 +729,28 @@
   /* ── Modal ── */
   function openModal(it) {
     const modal = document.getElementById('modal');
-    const tagsHtml = (it.tags||[]).map(t => `<span class="ctag" style="font-size:0.65rem;padding:0.15rem 0.4rem">${t}</span>`).join('');
+    const rar   = (it.rarity || '').toLowerCase();
+    const cls   = (it.class  || '').toLowerCase();
+    const sub   = it.subType  || '';
+    const type  = it.itemType || '';
+
+    const clsBadge  = cls  ? `<span class="badge badge-class ${cls}">${esc(it.class)}</span>` : '';
+    const typeBadge = type ? `<span class="badge badge-subtype">${esc(type)}</span>` : '';
+    const subBadge  = sub  ? `<span class="badge badge-subtype">${esc(sub)}</span>` : '';
 
     modal.innerHTML = `
-      <button class="close-btn" id="closeBtn">✕</button>
-      <img class="modal-hero" src="${it.image}" alt="${esc(it.name)}"
-           onerror="this.src='https://placehold.co/600x240/110e09/261e12?text=No+Image'">
-      <div class="modal-body">
-        <div class="modal-rarity" style="color:var(--${it.rarity})">${it.rarity.toUpperCase()}</div>
+      <div class="modal-img-col">
+        <img src="${esc(it.image||'')}" alt="${esc(it.name)}"
+             onerror="this.src='https://placehold.co/300x450/110e09/261e12?text=No+Image'">
+      </div>
+      <div class="modal-info-col">
+        <button class="close-btn" id="closeBtn">✕</button>
+        <div class="modal-rarity" style="color:var(--${rar})">${rar.toUpperCase()}</div>
         <div class="modal-name">${esc(it.name)}</div>
+        <div class="modal-badges">${clsBadge}${typeBadge}${subBadge}</div>
         <div class="modal-desc">${esc(it.description||'No description available.')}</div>
-        <div class="modal-tags">${tagsHtml}</div>
         <div class="modal-footer">
-          <div class="modal-price">${esc(it.price)}</div>
+          <div class="modal-price">${esc(it.price||'—')}</div>
         </div>
       </div>`;
 
@@ -780,16 +765,17 @@
   }
 
   /* ── Helpers ── */
-  function cap(s) { return String(s).toUpperCase(); }
-  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
 
   function clearAll() {
     document.getElementById('q').value = '';
-    document.getElementById('sortSel').value = '';
-    activeTags.clear();
     activeRarities = new Set(RARITIES);
+    activeClasses.clear();
+    activeTypes.clear();
     document.querySelectorAll('[data-r]').forEach(el => el.checked = true);
-    document.querySelectorAll('.tag-pill').forEach(el => el.classList.remove('on'));
+    document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('on'));
     render();
   }
 </script>

@@ -354,25 +354,47 @@
           </div>
 
           <div class="field">
+            <label>Class *</label>
+            <select id="f-class">
+              <option value="Warrior">Warrior</option>
+              <option value="Mage">Mage</option>
+              <option value="Thief">Thief</option>
+              <option value="Archer">Archer</option>
+              <option value="Pirate">Pirate</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Item Type *</label>
+            <select id="f-itemtype">
+              <option value="Armor">Armor</option>
+              <option value="Weapon">Weapon</option>
+              <option value="Emblem">Emblem</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Sub Type *</label>
+            <select id="f-subtype">
+              <!-- populated dynamically -->
+            </select>
+          </div>
+
+          <div class="field">
             <label>Seller Name</label>
             <input type="text" id="f-seller" placeholder="e.g. Merchant Aldric">
           </div>
 
           <div class="field">
             <label>Price *</label>
-            <input type="text" id="f-price" placeholder="e.g. 500gp, negotiable, 3 favours…">
+            <input type="text" id="f-price" placeholder="e.g. 500gp, negotiable…">
           </div>
 
           <div class="field full">
             <label>Image URL or Path</label>
             <input type="text" id="f-image" placeholder="images/my-item.png  or  https://…">
-            <img id="imgPreview" src="https://placehold.co/400x120/110e09/261e12?text=Preview" alt="preview">
-            <span class="hint">For local images, upload to the <code>images/</code> folder in your repo and enter the filename like <code>images/sword.png</code></span>
-          </div>
-
-          <div class="field full">
-            <label>Tags (comma-separated)</label>
-            <input type="text" id="f-tags" placeholder="weapon, sword, fire, magic, one-handed">
+            <img id="imgPreview" src="https://placehold.co/300x450/110e09/261e12?text=Preview" alt="preview" style="max-height:180px;width:auto;margin-top:0.4rem;">
+            <span class="hint">Images display in 2:3 portrait ratio. Upload to <code>images/</code> in your repo.</span>
           </div>
 
           <div class="field full">
@@ -458,31 +480,46 @@
   let itemList = [];
   let nextId = 100;
 
+  const TYPE_SUBS = {
+    armor:  ['Hat','Top','Pants','Cape','Glove','Shoe'],
+    weapon: ['Primary','Secondary'],
+    emblem: ['Mitras']
+  };
+
+  function populateSubtypes() {
+    const type = document.getElementById('f-itemtype').value.toLowerCase();
+    const sel  = document.getElementById('f-subtype');
+    const subs = TYPE_SUBS[type] || [];
+    sel.innerHTML = subs.map(s => `<option value="${s}">${s}</option>`).join('');
+  }
+
+  document.getElementById('f-itemtype').addEventListener('change', populateSubtypes);
+  populateSubtypes(); // init
+
   /* ─── Image preview ─── */
   document.getElementById('f-image').addEventListener('input', function() {
     const src = this.value.trim();
-    document.getElementById('imgPreview').src = src || 'https://placehold.co/400x120/110e09/261e12?text=Preview';
+    document.getElementById('imgPreview').src = src || 'https://placehold.co/300x450/110e09/261e12?text=Preview';
   });
 
   /* ─── Add item ─── */
   document.getElementById('addBtn').addEventListener('click', () => {
-    const name = document.getElementById('f-name').value.trim();
+    const name  = document.getElementById('f-name').value.trim();
     const price = document.getElementById('f-price').value.trim();
 
-    if (!name) return showStatus('formStatus', 'err', 'Item name is required.');
+    if (!name)  return showStatus('formStatus', 'err', 'Item name is required.');
     if (!price) return showStatus('formStatus', 'err', 'Please enter a price.');
 
-    const tags = document.getElementById('f-tags').value
-      .split(',').map(t => t.trim()).filter(Boolean);
-
     const item = {
-      id: nextId++,
+      id:          nextId++,
       name,
       rarity:      document.getElementById('f-rarity').value,
+      class:       document.getElementById('f-class').value,
+      itemType:    document.getElementById('f-itemtype').value,
+      subType:     document.getElementById('f-subtype').value,
       price,
       seller:      document.getElementById('f-seller').value.trim(),
       image:       document.getElementById('f-image').value.trim(),
-      tags,
       description: document.getElementById('f-desc').value.trim(),
     };
 
@@ -518,7 +555,7 @@
             <span class="li-rarity" style="color:var(--${it.rarity});border-color:var(--${it.rarity})">${it.rarity}</span>
             ${esc(it.name)}
           </div>
-          <div class="li-meta">${esc(it.price)} · Seller: ${esc(it.seller||'Unknown')}</div>
+          <div class="li-meta">${esc(it.price)} · ${esc(it.class||'')} · ${esc(it.itemType||'')} (${esc(it.subType||'')}) · Seller: ${esc(it.seller||'Unknown')}</div>
         </div>
         <button class="btn-danger" data-id="${it.id}">✕</button>`;
       row.querySelector('button').addEventListener('click', e => {
@@ -577,10 +614,13 @@
 
   /* ─── Helpers ─── */
   function clearForm() {
-    ['f-name','f-seller','f-image','f-tags','f-desc'].forEach(id => document.getElementById(id).value = '');
+    ['f-name','f-seller','f-image','f-desc'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('f-price').value = '';
-    document.getElementById('f-rarity').value = 'vip';
-    document.getElementById('imgPreview').src = 'https://placehold.co/400x120/110e09/261e12?text=Preview';
+    document.getElementById('f-rarity').value   = 'vip';
+    document.getElementById('f-class').value    = 'Warrior';
+    document.getElementById('f-itemtype').value = 'Armor';
+    populateSubtypes();
+    document.getElementById('imgPreview').src = 'https://placehold.co/300x450/110e09/261e12?text=Preview';
   }
 
   function showStatus(id, type, msg) {
