@@ -22,11 +22,11 @@
       --border-hi:   #3e3020;
 
       /* Rarity colours */
-      --vip:    #00bfff;
-      --vvip:   #bf00ff;
-      --vvvip:  #ff2299;
-      --vvvvip: #ff8800;
-      --god:    #ffd700;
+      --vip: #44D62C;
+      --vvip: #00bfff;
+      --vvvip: #bf00ff;
+      --vvvvip: #ff2299;
+      --god: #ffd700;
 
       /* Class colours */
       --cls-warrior: #e03030;
@@ -98,7 +98,7 @@
 
     .subtitle {
       font-family: 'Cinzel', serif;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       letter-spacing: 0.55em;
       color: var(--text-dim);
       text-transform: uppercase;
@@ -282,17 +282,17 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .card.vip:hover    { border-color: var(--vip);    box-shadow: 0 8px 28px rgba(0,191,255,0.18); }
-    .card.vvip:hover   { border-color: var(--vvip);   box-shadow: 0 8px 28px rgba(191,0,255,0.18); }
-    .card.vvvip:hover  { border-color: var(--vvvip);  box-shadow: 0 8px 28px rgba(255,34,153,0.18); }
-    .card.vvvvip:hover { border-color: var(--vvvvip); box-shadow: 0 8px 28px rgba(255,136,0,0.20); }
+    .card.vip:hover    { border-color: var(--vip);    box-shadow: 0 8px 28px rgba(68,214,44,0.18); }
+    .card.vvip:hover   { border-color: var(--vvip);   box-shadow: 0 8px 28px rgba(0,191,255,0.18); }
+    .card.vvvip:hover  { border-color: var(--vvvip);  box-shadow: 0 8px 28px rgba(191,0,255,0.18); }
+    .card.vvvvip:hover { border-color: var(--vvvvip); box-shadow: 0 8px 28px rgba(255,34,153,0.18); }
     .card.god:hover    { border-color: var(--god);    box-shadow: 0 8px 34px rgba(255,215,0,0.30); }
 
     /* Resting rarity border tint */
-    .card.vip    { border-color: rgba(0,191,255,0.22); }
-    .card.vvip   { border-color: rgba(191,0,255,0.25); }
-    .card.vvvip  { border-color: rgba(255,34,153,0.25); }
-    .card.vvvvip { border-color: rgba(255,136,0,0.28); }
+    .card.vip    { border-color: rgba(68,214,44,0.22); }
+    .card.vvip   { border-color: rgba(0,191,255,0.22); }
+    .card.vvvip  { border-color: rgba(191,0,255,0.25); }
+    .card.vvvvip { border-color: rgba(255,34,153,0.25); }
     .card.god    { border-color: rgba(255,215,0,0.35); }
 
     /* Image wrapper — 2:3 portrait ratio */
@@ -336,7 +336,7 @@
 
     .card-name {
       font-family: 'Cinzel', serif;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: var(--text-bright);
       line-height: 1.2;
@@ -384,9 +384,10 @@
 
     .price {
       font-family: 'Cinzel', serif;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--gold);
+      margin: auto;
     }
 
     /* ─── Empty state ─── */
