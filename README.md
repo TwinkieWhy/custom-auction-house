@@ -13,6 +13,7 @@ Thank to Claude for vibecoding the majority of this lmao.
 **Tip:** You can also use external image URLs (e.g. from Imgur or a CDN) if you don't want to store images in the repo:
 ```json
 "image": "https://i.imgur.com/XXXXXXX.png"
+```
 
 ---
 
