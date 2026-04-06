@@ -418,17 +418,5 @@
     "seller": "",
     "image": "images/god_warrior_cape.png",
     "description": "97 str\n1885 atk"
-  },
-  {
-    "id": 135,
-    "name": "Eternal Knight Helm",
-    "rarity": "god",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Hat",
-    "price": "40t",
-    "seller": "",
-    "image": "images/god_warrior_hat.png",
-    "description": "113 str\n1849 atk"
   }
 ]
