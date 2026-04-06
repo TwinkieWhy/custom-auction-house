@@ -366,7 +366,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "40t",
+    "price": "50t",
     "seller": "",
     "image": "images/god_archer_shoe.png",
     "description": "567 dex\n1752 atk\ntemu-lite"
@@ -378,7 +378,7 @@
     "class": "Mage",
     "itemType": "Emblem",
     "subType": "Mitras",
-    "price": "12t",
+    "price": "15t",
     "seller": "",
     "image": "images/god_mage_mitras.png",
     "description": "874 int\n1659 matk\ntemu-lite"
@@ -390,7 +390,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "20t",
+    "price": "30t",
     "seller": "",
     "image": "images/god_thief_top.png",
     "description": "813 luk\n1638 atk\ntemu-lite"
@@ -402,7 +402,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "35t",
+    "price": "50t",
     "seller": "",
     "image": "images/god_thief_top_1.png",
     "description": "68 luk\n1916 atk"
