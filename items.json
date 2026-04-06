@@ -4,143 +4,119 @@
     "name": "Blade of Eternal Frost",
     "description": "A longsword forged from glacial iron, perpetually cold to the touch. Those struck by its edge feel a chill seeping into the very marrow of their bones. Legend holds it was quenched in the tears of a dying frost giant.",
     "image": "https://picsum.photos/seed/frostblade/400/300",
-    "rarity": "legendary",
-    "price": 5000,
-    "currency": "gp",
+    "rarity": "god",
+    "price": "5,000gp",
     "seller": "Merchant Aldric",
-    "tags": ["weapon", "sword", "ice", "magic", "one-handed"],
-    "stats": "+2d6 cold damage on hit · +1 to attack rolls · Immunity to cold damage"
+    "tags": ["weapon", "sword", "ice", "magic", "one-handed"]
   },
   {
     "id": 2,
     "name": "Cloak of the Shadow Weave",
     "description": "Woven from the darkness between stars, this cloak wraps its wearer in living shadow. Footsteps make no sound, and even torchlight seems reluctant to illuminate its folds.",
     "image": "https://picsum.photos/seed/shadowcloak/400/300",
-    "rarity": "epic",
-    "price": 2800,
-    "currency": "gp",
+    "rarity": "vvvvip",
+    "price": "2,800gp",
     "seller": "The Veiled Market",
-    "tags": ["armor", "cloak", "stealth", "magic", "shadow"],
-    "stats": "Advantage on Stealth checks · Advantage on Dexterity saves · Darkvision 60ft"
+    "tags": ["armor", "cloak", "stealth", "magic", "shadow"]
   },
   {
     "id": 3,
     "name": "Ring of Sorcerous Amplification",
     "description": "A plain iron band inscribed with runes so small they can only be read with a jeweler's loupe. The runes form a recursive spell that feeds on itself, growing stronger with each casting.",
     "image": "https://picsum.photos/seed/sorcring/400/300",
-    "rarity": "rare",
-    "price": 1200,
-    "currency": "gp",
+    "rarity": "vvvip",
+    "price": "1,200gp",
     "seller": "Aldric's Emporium",
-    "tags": ["jewelry", "ring", "magic", "arcane", "spellcasting"],
-    "stats": "+1 to spell save DC · Spells of 3rd level or lower cost one fewer spell slot (1/day)"
+    "tags": ["jewelry", "ring", "magic", "arcane", "spellcasting"]
   },
   {
     "id": 4,
     "name": "Boots of Swift Passage",
     "description": "Supple leather boots lined with the feathers of a Wind Hawk. They feel lighter with every step, as if the ground itself is eager to push you along.",
     "image": "https://picsum.photos/seed/swiftboots/400/300",
-    "rarity": "uncommon",
-    "price": 450,
-    "currency": "gp",
+    "rarity": "vvip",
+    "price": "450gp",
     "seller": "Quilla's Travelling Wares",
-    "tags": ["armor", "boots", "movement", "magic", "leather"],
-    "stats": "+10ft movement speed · Ignore difficult terrain once per short rest"
+    "tags": ["armor", "boots", "movement", "magic", "leather"]
   },
   {
     "id": 5,
     "name": "Hammer of the Deep Forge",
     "description": "This war hammer was crafted in the deepest dwarven forge beneath the Ironspine Mountains. The head is carved from a single piece of starfall iron, still faintly warm after centuries.",
     "image": "https://picsum.photos/seed/deepforge/400/300",
-    "rarity": "epic",
-    "price": 3200,
-    "currency": "gp",
+    "rarity": "vvvvip",
+    "price": "3,200gp",
     "seller": "The Iron Brotherhood",
-    "tags": ["weapon", "hammer", "fire", "magic", "two-handed", "dwarven"],
-    "stats": "+2 to attack and damage · 1d6 fire damage on hit · Can cast Heat Metal 2/day"
+    "tags": ["weapon", "hammer", "fire", "magic", "two-handed", "dwarven"]
   },
   {
     "id": 6,
     "name": "Potion of Giant Strength",
     "description": "A murky amber liquid that smells of old oak and iron. When consumed, the drinker's veins fill with the might of a hill giant for one hour.",
     "image": "https://picsum.photos/seed/giantpotion/400/300",
-    "rarity": "uncommon",
-    "price": 150,
-    "currency": "gp",
+    "rarity": "vvip",
+    "price": "150gp",
     "seller": "Yeva the Alchemist",
-    "tags": ["consumable", "potion", "strength", "buff"],
-    "stats": "STR becomes 21 for 1 hour"
+    "tags": ["consumable", "potion", "strength", "buff"]
   },
   {
     "id": 7,
     "name": "Amulet of the Warding Flame",
     "description": "A filigree amulet containing a sliver of phoenix feather suspended in enchanted resin. The flame inside it has never been seen to flicker.",
     "image": "https://picsum.photos/seed/wardinflame/400/300",
-    "rarity": "rare",
-    "price": 900,
-    "currency": "gp",
+    "rarity": "vvvip",
+    "price": "900gp",
     "seller": "Merchant Aldric",
-    "tags": ["jewelry", "amulet", "fire", "protection", "magic"],
-    "stats": "Resistance to fire damage · +2 to saving throws vs spells"
+    "tags": ["jewelry", "amulet", "fire", "protection", "magic"]
   },
   {
     "id": 8,
     "name": "Quarterstaff of the Elder Grove",
     "description": "Cut from a tree struck by lightning in the heart of the Moonwood. The wood is unnaturally smooth and hums with a low frequency only druids can hear.",
     "image": "https://picsum.photos/seed/elderstaff/400/300",
-    "rarity": "rare",
-    "price": 750,
-    "currency": "gp",
+    "rarity": "vvvip",
+    "price": "750gp",
     "seller": "Quilla's Travelling Wares",
-    "tags": ["weapon", "staff", "nature", "druid", "magic"],
-    "stats": "+1 to attack and damage · Can cast Speak with Plants at will · Entangle 1/day"
+    "tags": ["weapon", "staff", "nature", "druid", "magic"]
   },
   {
     "id": 9,
     "name": "Cursed Gauntlets of Greed",
     "description": "Beautifully gilded gauntlets that grip anything placed in them with supernatural strength. The catch: the wearer cannot willingly release anything they pick up without a DC 15 Wisdom save.",
     "image": "https://picsum.photos/seed/greedgaunts/400/300",
-    "rarity": "uncommon",
-    "price": 50,
-    "currency": "gp",
+    "rarity": "vip",
+    "price": "50gp (buyer beware)",
     "seller": "A Suspicious Merchant",
-    "tags": ["armor", "gauntlet", "cursed", "magic"],
-    "stats": "+4 to grapple checks · Must succeed DC 15 WIS save to release any held object"
+    "tags": ["armor", "gauntlet", "cursed", "magic"]
   },
   {
     "id": 10,
     "name": "Iron Rations (1 week)",
     "description": "Hard tack, dried meat, and salted vegetables. Not pleasant, but keeps a traveller alive through a week of hard marching.",
     "image": "https://picsum.photos/seed/ironrations/400/300",
-    "rarity": "common",
-    "price": 5,
-    "currency": "gp",
+    "rarity": "vip",
+    "price": "5gp",
     "seller": "The General Store",
-    "tags": ["consumable", "food", "survival", "mundane"],
-    "stats": "Sustains one person for 7 days"
+    "tags": ["consumable", "food", "survival", "mundane"]
   },
   {
     "id": 11,
     "name": "Tome of Lost Spells",
     "description": "A water-damaged spellbook recovered from a sunken library. Several pages are illegible, but three spells remain intact — their school and level unclear until studied.",
     "image": "https://picsum.photos/seed/losttome/400/300",
-    "rarity": "rare",
-    "price": 1800,
-    "currency": "gp",
+    "rarity": "vvvip",
+    "price": "1,800gp",
     "seller": "Aldric's Emporium",
-    "tags": ["magic", "book", "arcane", "spellbook", "mystery"],
-    "stats": "Contains 3 random spells (GM determines) · 200 blank pages remaining"
+    "tags": ["magic", "book", "arcane", "spellbook", "mystery"]
   },
   {
     "id": 12,
     "name": "Obsidian Arrow Set (20)",
     "description": "Twenty arrows tipped with volcanic obsidian, sharper than steel and capable of piercing most natural armour. Fragile — each breaks on impact.",
     "image": "https://picsum.photos/seed/obsidianarrow/400/300",
-    "rarity": "common",
-    "price": 30,
-    "currency": "gp",
+    "rarity": "vip",
+    "price": "30gp",
     "seller": "The Iron Brotherhood",
-    "tags": ["weapon", "ammo", "bow", "arrow", "mundane"],
-    "stats": "+1 damage · Ignores natural armour (hides, scales) · Single use per arrow"
+    "tags": ["weapon", "ammo", "bow", "arrow", "mundane"]
   }
 ]

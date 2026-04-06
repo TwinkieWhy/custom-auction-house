@@ -345,11 +345,11 @@
           <div class="field">
             <label>Rarity *</label>
             <select id="f-rarity">
-              <option value="common">Common</option>
-              <option value="uncommon">Uncommon</option>
-              <option value="rare">Rare</option>
-              <option value="epic">Epic</option>
-              <option value="legendary">Legendary</option>
+              <option value="vip">VIP</option>
+              <option value="vvip">VVIP</option>
+              <option value="vvvip">VVVIP</option>
+              <option value="vvvvip">VVVVIP</option>
+              <option value="god">GOD</option>
             </select>
           </div>
 
@@ -360,12 +360,7 @@
 
           <div class="field">
             <label>Price *</label>
-            <input type="number" id="f-price" placeholder="e.g. 500" min="0">
-          </div>
-
-          <div class="field">
-            <label>Currency</label>
-            <input type="text" id="f-currency" placeholder="gp" value="gp">
+            <input type="text" id="f-price" placeholder="e.g. 500gp, negotiable, 3 favours…">
           </div>
 
           <div class="field full">
@@ -383,11 +378,6 @@
           <div class="field full">
             <label>Description</label>
             <textarea id="f-desc" placeholder="Flavour text describing the item…"></textarea>
-          </div>
-
-          <div class="field full">
-            <label>Stats / Properties</label>
-            <textarea id="f-stats" placeholder="+1 to attack · 1d6 fire damage on hit" style="min-height:50px"></textarea>
           </div>
 
         </div>
@@ -477,10 +467,10 @@
   /* ─── Add item ─── */
   document.getElementById('addBtn').addEventListener('click', () => {
     const name = document.getElementById('f-name').value.trim();
-    const price = parseFloat(document.getElementById('f-price').value);
+    const price = document.getElementById('f-price').value.trim();
 
     if (!name) return showStatus('formStatus', 'err', 'Item name is required.');
-    if (isNaN(price) || price < 0) return showStatus('formStatus', 'err', 'Please enter a valid price.');
+    if (!price) return showStatus('formStatus', 'err', 'Please enter a price.');
 
     const tags = document.getElementById('f-tags').value
       .split(',').map(t => t.trim()).filter(Boolean);
@@ -490,12 +480,10 @@
       name,
       rarity:      document.getElementById('f-rarity').value,
       price,
-      currency:    document.getElementById('f-currency').value.trim() || 'gp',
       seller:      document.getElementById('f-seller').value.trim(),
       image:       document.getElementById('f-image').value.trim(),
       tags,
       description: document.getElementById('f-desc').value.trim(),
-      stats:       document.getElementById('f-stats').value.trim(),
     };
 
     itemList.push(item);
@@ -530,7 +518,7 @@
             <span class="li-rarity" style="color:var(--${it.rarity});border-color:var(--${it.rarity})">${it.rarity}</span>
             ${esc(it.name)}
           </div>
-          <div class="li-meta">${it.price.toLocaleString()} ${esc(it.currency||'gp')} · ${esc(it.seller||'Unknown')}</div>
+          <div class="li-meta">${esc(it.price)} · Seller: ${esc(it.seller||'Unknown')}</div>
         </div>
         <button class="btn-danger" data-id="${it.id}">✕</button>`;
       row.querySelector('button').addEventListener('click', e => {
@@ -589,10 +577,9 @@
 
   /* ─── Helpers ─── */
   function clearForm() {
-    ['f-name','f-seller','f-image','f-tags','f-desc','f-stats'].forEach(id => document.getElementById(id).value = '');
+    ['f-name','f-seller','f-image','f-tags','f-desc'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('f-price').value = '';
-    document.getElementById('f-currency').value = 'gp';
-    document.getElementById('f-rarity').value = 'common';
+    document.getElementById('f-rarity').value = 'vip';
     document.getElementById('imgPreview').src = 'https://placehold.co/400x120/110e09/261e12?text=Preview';
   }
 
