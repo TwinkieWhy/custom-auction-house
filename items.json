@@ -138,7 +138,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "20t",
+    "price": "18t",
     "seller": "",
     "image": "images/4v_pirate_cape_1.png",
     "description": "1114 dex\n1635 atk"
@@ -150,7 +150,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "20t",
+    "price": "18t",
     "seller": "",
     "image": "images/4v_pirate_hat.png",
     "description": "1233 str\n1625 atk"
@@ -186,7 +186,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "20t",
+    "price": "18t",
     "seller": "",
     "image": "images/4v_pirate_pants.png",
     "description": "1115 str\n1647 atk"
@@ -282,7 +282,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "15t",
+    "price": "18t",
     "seller": "",
     "image": "images/4v_thief_top.png",
     "description": "69 luk\n1739 atk"
@@ -318,7 +318,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "25t",
+    "price": "22t",
     "seller": "",
     "image": "images/4v_warrior_hat_1.png",
     "description": "972 str\n1660 atk"
@@ -330,7 +330,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "28t",
+    "price": "30t",
     "seller": "",
     "image": "images/4v_warrior_pants.png",
     "description": "1135 str\n1785 atk"
@@ -342,7 +342,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "25t",
+    "price": "22t",
     "seller": "",
     "image": "images/4v_warrior_shoes.png",
     "description": "1123 str\n1651 atk"
@@ -354,7 +354,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "25t",
+    "price": "22t",
     "seller": "",
     "image": "images/4v_warrior_shoes_1.png",
     "description": "1035 str\n1647 atk"
@@ -369,7 +369,7 @@
     "price": "40t",
     "seller": "",
     "image": "images/god_archer_shoe.png",
-    "description": "567 dex\n1752 atk"
+    "description": "567 dex\n1752 atk\ntemu-lite"
   },
   {
     "id": 131,
@@ -381,7 +381,7 @@
     "price": "12t",
     "seller": "",
     "image": "images/god_mage_mitras.png",
-    "description": "874 int\n1659 matk"
+    "description": "874 int\n1659 matk\ntemu-lite"
   },
   {
     "id": 132,
@@ -393,7 +393,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/god_thief_top.png",
-    "description": "813 luk\n1638 atk"
+    "description": "813 luk\n1638 atk\ntemu-lite"
   },
   {
     "id": 133,
@@ -402,7 +402,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "40t",
+    "price": "35t",
     "seller": "",
     "image": "images/god_thief_top_1.png",
     "description": "68 luk\n1916 atk"
