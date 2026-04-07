@@ -454,5 +454,17 @@
     "seller": "",
     "image": "images/137.png",
     "description": "743 str, +1606 atk roll"
+  },
+  {
+    "id": 138,
+    "name": "Eternal Archer Shoes",
+    "rarity": "vvip",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "8t",
+    "seller": "",
+    "image": "images/137.png",
+    "description": "652 dex, 1346 atk"
   }
 ]
