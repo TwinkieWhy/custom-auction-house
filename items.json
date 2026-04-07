@@ -6,7 +6,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Glove",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_archer_glove.png",
     "description": "620 dex\n1565 atk\ntemu-lite"
@@ -42,7 +42,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_archer_shoe.png",
     "description": "83 dex\n1645 atk"
@@ -54,7 +54,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "28t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_archer_shoe_1.png",
     "description": "992 dex\n1670 atk"
@@ -66,7 +66,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "30t",
+    "price": "25t",
     "seller": "",
     "image": "images/4v_archer_top.png",
     "description": "1033 dex\n1719 atk"
@@ -78,7 +78,7 @@
     "class": "Mage",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_mage_cape.png",
     "description": "566 int\n1611 matk"
@@ -90,7 +90,7 @@
     "class": "Mage",
     "itemType": "Emblem",
     "subType": "Mitras",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_mage_mitras.png",
     "description": "873 int\n1739 matk"
@@ -114,7 +114,7 @@
     "class": "Mage",
     "itemType": "Emblem",
     "subType": "Mitras",
-    "price": "22t",
+    "price": "18t",
     "seller": "",
     "image": "images/4v_mage_mitras_2.png",
     "description": "1211 int\n1636 matk"
@@ -126,7 +126,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_cape.png",
     "description": "1422 str\n1729 atk"
@@ -138,7 +138,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "18t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_cape_1.png",
     "description": "1114 dex\n1635 atk"
@@ -150,7 +150,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "18t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_hat.png",
     "description": "1233 str\n1625 atk"
@@ -162,7 +162,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "22t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_hat_1.png",
     "description": "1050 str\n1751 atk"
@@ -174,7 +174,7 @@
     "class": "Pirate",
     "itemType": "Emblem",
     "subType": "Mitras",
-    "price": "12t",
+    "price": "10t",
     "seller": "",
     "image": "images/4v_pirate_mitras.png",
     "description": "1663 atk"
@@ -186,7 +186,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "18t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_pants.png",
     "description": "1115 str\n1647 atk"
@@ -198,7 +198,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_pants_1.png",
     "description": "608 dex\n1733 watk"
@@ -210,7 +210,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_pants_2.png",
     "description": "1506 dex\n1634 atk"
@@ -222,7 +222,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "22t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_shoe.png",
     "description": "566 str\n1805 atk"
@@ -234,7 +234,7 @@
     "class": "Pirate",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "22t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_top.png",
     "description": "1170 dex\n1758 atk"
@@ -294,7 +294,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "22t",
+    "price": "15t",
     "seller": "",
     "image": "images/4v_warrior_cape.png",
     "description": "62 str\n1625 atk"
@@ -306,7 +306,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "28t",
+    "price": "25t",
     "seller": "",
     "image": "images/4v_warrior_hat.png",
     "description": "805 str\n1713 atk"
@@ -318,7 +318,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_warrior_hat_1.png",
     "description": "972 str\n1660 atk"
@@ -330,7 +330,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "30t",
+    "price": "25t",
     "seller": "",
     "image": "images/4v_warrior_pants.png",
     "description": "1135 str\n1785 atk"
@@ -342,7 +342,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_warrior_shoes.png",
     "description": "1123 str\n1651 atk"
@@ -354,7 +354,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/4v_warrior_shoes_1.png",
     "description": "1035 str\n1647 atk"
@@ -366,7 +366,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "50t",
+    "price": "40t",
     "seller": "",
     "image": "images/god_archer_shoe.png",
     "description": "567 dex\n1752 atk\ntemu-lite"
@@ -390,7 +390,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "30t",
+    "price": "20t",
     "seller": "",
     "image": "images/god_thief_top.png",
     "description": "813 luk\n1638 atk\ntemu-lite"
@@ -414,7 +414,7 @@
     "class": "Warrior",
     "itemType": "Armor",
     "subType": "Cape",
-    "price": "75t",
+    "price": "70t",
     "seller": "",
     "image": "images/god_warrior_cape.png",
     "description": "97 str\n1885 atk"
@@ -426,7 +426,7 @@
     "class": "Archer",
     "itemType": "Weapon",
     "subType": "Secondary",
-    "price": "30t",
+    "price": "25t",
     "seller": "",
     "image": "images/135.png",
     "description": "926 dex, 1795 atk"
@@ -438,7 +438,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "25t",
+    "price": "20t",
     "seller": "",
     "image": "images/136.png",
     "description": "1051 luk, 1788 atk"
@@ -450,7 +450,7 @@
     "class": "Warrior",
     "itemType": "Weapon",
     "subType": "Primary",
-    "price": "20t",
+    "price": "15t",
     "seller": "",
     "image": "images/137.png",
     "description": "743 str, +1606 atk roll"
