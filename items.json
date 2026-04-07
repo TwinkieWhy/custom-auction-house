@@ -360,18 +360,6 @@
     "description": "1035 str\n1647 atk"
   },
   {
-    "id": 130,
-    "name": "Eternal Archer Shoes",
-    "rarity": "god",
-    "class": "Archer",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "40t",
-    "seller": "",
-    "image": "images/god_archer_shoe.png",
-    "description": "567 dex\n1752 atk\ntemu-lite"
-  },
-  {
     "id": 131,
     "name": "Metra's Fury: Mage",
     "rarity": "god",
