@@ -288,30 +288,6 @@
     "description": "69 luk\n1739 atk"
   },
   {
-    "id": 124,
-    "name": "Eternal Knight Cape",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Cape",
-    "price": "15t",
-    "seller": "",
-    "image": "images/4v_warrior_cape.png",
-    "description": "62 str\n1625 atk"
-  },
-  {
-    "id": 125,
-    "name": "Eternal Knight Helm",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Hat",
-    "price": "25t",
-    "seller": "",
-    "image": "images/4v_warrior_hat.png",
-    "description": "805 str\n1713 atk"
-  },
-  {
     "id": 126,
     "name": "Eternal Knight Helm",
     "rarity": "vvvvip",
@@ -322,30 +298,6 @@
     "seller": "",
     "image": "images/4v_warrior_hat_1.png",
     "description": "972 str\n1660 atk"
-  },
-  {
-    "id": 127,
-    "name": "Eternal Knight Pants",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Pants",
-    "price": "25t",
-    "seller": "",
-    "image": "images/4v_warrior_pants.png",
-    "description": "1135 str\n1785 atk"
-  },
-  {
-    "id": 128,
-    "name": "Eternal Knight Shoes",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "20t",
-    "seller": "",
-    "image": "images/4v_warrior_shoes.png",
-    "description": "1123 str\n1651 atk"
   },
   {
     "id": 129,
@@ -382,18 +334,6 @@
     "seller": "",
     "image": "images/god_thief_top_1.png",
     "description": "68 luk\n1916 atk"
-  },
-  {
-    "id": 134,
-    "name": "Eternal Knight Cape",
-    "rarity": "god",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Cape",
-    "price": "70t",
-    "seller": "",
-    "image": "images/god_warrior_cape.png",
-    "description": "97 str\n1885 atk"
   },
   {
     "id": 135,
@@ -468,18 +408,6 @@
     "description": "68 str, 1513 atk"
   },
   {
-    "id": 142,
-    "name": "Arcane Symbol: Arcana",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "images/142.png",
-    "description": "1785 watk"
-  },
-  {
     "id": 143,
     "name": "Sacred Symbol: Odium",
     "rarity": "vvip",
@@ -490,66 +418,6 @@
     "seller": "",
     "image": "images/143.png",
     "description": "1086 watk"
-  },
-  {
-    "id": 144,
-    "name": "Sacred Symbol: Carcion",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "images/144.png",
-    "description": "1785 watk"
-  },
-  {
-    "id": 145,
-    "name": "Grand Authentic Symbol: Geared Rock",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Grand Authentic",
-    "price": "50t",
-    "seller": "",
-    "image": "images/145.png",
-    "description": "1762 watk"
-  },
-  {
-    "id": 146,
-    "name": "Arcane Symbol: Esfera",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "15t",
-    "seller": "",
-    "image": "images/146.png",
-    "description": "1676 watk"
-  },
-  {
-    "id": 147,
-    "name": "Arcane Symbol: Morass",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "images/147.png",
-    "description": "1724 watk"
-  },
-  {
-    "id": 148,
-    "name": "Arcane Symbol: Lachelein",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "15t",
-    "seller": "",
-    "image": "images/148.png",
-    "description": "1648 watk"
   },
   {
     "id": 149,
