@@ -34,6 +34,8 @@
       --cls-thief:   #9030c0;
       --cls-archer:  #30a040;
       --cls-pirate:  #808080;
+      --cls-watk:    #e07820;
+      --cls-matk:    #20c8c0;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -160,42 +162,12 @@
     input:focus { border-color: var(--gold-dim); }
     input::placeholder { color: var(--text-dim); font-style: italic; }
 
-    /* Rarity toggle rows */
-    .rarity-row {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.28rem 0;
-      cursor: pointer;
-      font-size: 0.88rem;
-      user-select: none;
-    }
-
-    .rarity-row input[type="checkbox"] { display: none; }
-
-    .check-box {
-      width: 14px; height: 14px;
-      border: 1px solid var(--border-hi);
-      background: var(--bg-input);
-      border-radius: 2px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .rarity-row input:checked ~ .check-box { background: var(--gold); border-color: var(--gold); }
-
-    .check-box::after { content: ''; width: 6px; height: 6px; display: none; }
-
-    .rarity-row input:checked ~ .check-box::after {
-      display: block;
-      border-right: 2px solid #000;
-      border-bottom: 2px solid #000;
-      transform: rotate(45deg) translateY(-1px);
-    }
-
-    .rarity-gem { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    /* Rarity filter pills */
+    .filter-pill.rar-vip.on    { color: var(--vip);    border-color: var(--vip);    background: rgba(68,214,44,0.10); }
+    .filter-pill.rar-vvip.on   { color: var(--vvip);   border-color: var(--vvip);   background: rgba(0,191,255,0.10); }
+    .filter-pill.rar-vvvip.on  { color: var(--vvvip);  border-color: var(--vvvip);  background: rgba(191,0,255,0.10); }
+    .filter-pill.rar-vvvvip.on { color: var(--vvvvip); border-color: var(--vvvvip); background: rgba(255,34,153,0.10); }
+    .filter-pill.rar-god.on    { color: var(--god);    border-color: var(--god);    background: rgba(255,215,0,0.10); }
 
     /* Filter pills (class, itemtype) */
     .pill-cloud { display: flex; flex-wrap: wrap; gap: 0.3rem; }
@@ -223,6 +195,8 @@
     .filter-pill.cls-thief.on   { color: var(--cls-thief);   border-color: var(--cls-thief);   background: rgba(144,48,192,0.10); }
     .filter-pill.cls-archer.on  { color: var(--cls-archer);  border-color: var(--cls-archer);  background: rgba(48,160,64,0.10); }
     .filter-pill.cls-pirate.on  { color: var(--cls-pirate);  border-color: var(--cls-pirate);  background: rgba(128,128,128,0.10); }
+    .filter-pill.cls-watk.on    { color: var(--cls-watk);    border-color: var(--cls-watk);    background: rgba(224,120,32,0.10); }
+    .filter-pill.cls-matk.on    { color: var(--cls-matk);    border-color: var(--cls-matk);    background: rgba(32,200,192,0.10); }
 
     /* Clear button */
     button.clear-all {
@@ -262,7 +236,7 @@
     /* ─── Item grid ─── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
       gap: 1rem;
     }
 
@@ -366,6 +340,8 @@
     .badge-class.thief   { color: var(--cls-thief);   border-color: rgba(144,48,192,0.45);  background: rgba(144,48,192,0.08); }
     .badge-class.archer  { color: var(--cls-archer);  border-color: rgba(48,160,64,0.45);   background: rgba(48,160,64,0.08); }
     .badge-class.pirate  { color: var(--cls-pirate);  border-color: rgba(128,128,128,0.45); background: rgba(128,128,128,0.08); }
+    .badge-class.watk    { color: var(--cls-watk);    border-color: rgba(224,120,32,0.45);  background: rgba(224,120,32,0.08); }
+    .badge-class.matk    { color: var(--cls-matk);    border-color: rgba(32,200,192,0.45);  background: rgba(32,200,192,0.08); }
 
     /* Subtype badge */
     .badge-subtype {
@@ -574,7 +550,7 @@
 
     <div class="filter-block">
       <span class="filter-label">Rarity</span>
-      <div id="rarityPanel"></div>
+      <div class="pill-cloud" id="rarityPanel"></div>
     </div>
 
     <div class="filter-block">
@@ -585,6 +561,11 @@
     <div class="filter-block">
       <span class="filter-label">Item Type</span>
       <div class="pill-cloud" id="typePanel"></div>
+    </div>
+
+    <div class="filter-block">
+      <span class="filter-label">Sub Type</span>
+      <div class="pill-cloud" id="subtypePanel"></div>
     </div>
 
     <button class="clear-all" id="clearBtn">✕ &nbsp; Clear All Filters</button>
@@ -607,23 +588,28 @@
 </div>
 
 <script>
-  const RARITIES     = ['god','vvvvip','vvvip','vvip','vip'];
-  const RARITY_RANK  = {god:0, vvvvip:1, vvvip:2, vvip:3, vip:4};
+  const RARITIES    = ['god','vvvvip','vvvip','vvip','vip'];
+  const RARITY_RANK = {god:0, vvvvip:1, vvvip:2, vvip:3, vip:4};
 
-  const CLASSES      = ['Warrior','Mage','Thief','Archer','Pirate'];
-  const CLASS_CSS    = {warrior:'warrior', mage:'mage', thief:'thief', archer:'archer', pirate:'pirate'};
+  // Standard classes + Symbol-specific pseudo-classes
+  const CLASSES     = ['Warrior','Mage','Thief','Archer','Pirate','WATK','MATK'];
+  const CLASS_RANK  = {warrior:0, mage:1, thief:2, archer:3, pirate:4, watk:5, matk:6};
 
-  const ITEM_TYPES   = ['Armor','Weapon','Emblem'];
-  const TYPE_SUBS    = {
+  const ITEM_TYPES  = ['Armor','Weapon','Emblem','Symbol'];
+  const TYPE_SUBS   = {
     armor:  ['Hat','Top','Pants','Cape','Glove','Shoe'],
     weapon: ['Primary','Secondary'],
-    emblem: ['Mitras']
+    emblem: ['Mitras'],
+    symbol: ['Arcane','Sacred','Grand Authentic']
   };
+  // All unique subtypes flattened for the filter
+  const ALL_SUBTYPES = [...new Set(Object.values(TYPE_SUBS).flat())];
 
   let items          = [];
-  let activeRarities = new Set(RARITIES);
+  let activeRarities = new Set();   // empty = all
   let activeClasses  = new Set();   // empty = all
   let activeTypes    = new Set();   // empty = all
+  let activeSubtypes = new Set();   // empty = all
 
   /* ── Bootstrap ── */
   fetch('items.json?v=' + Date.now())
@@ -635,21 +621,18 @@
 
   /* ── Sidebar ── */
   function buildSidebar() {
-    /* Rarity checkboxes */
+    /* Rarity pills */
     const rp = document.getElementById('rarityPanel');
     RARITIES.forEach(r => {
-      const lbl = document.createElement('label');
-      lbl.className = 'rarity-row';
-      lbl.innerHTML = `
-        <input type="checkbox" checked data-r="${r}">
-        <span class="check-box"></span>
-        <span class="rarity-gem" style="background:var(--${r})"></span>
-        <span style="color:var(--${r})">${r.toUpperCase()}</span>`;
-      lbl.querySelector('input').addEventListener('change', e => {
-        e.target.checked ? activeRarities.add(r) : activeRarities.delete(r);
+      const el = document.createElement('span');
+      el.className = `filter-pill rar-${r}`;
+      el.textContent = r.toUpperCase();
+      el.addEventListener('click', () => {
+        const active = el.classList.toggle('on');
+        active ? activeRarities.add(r) : activeRarities.delete(r);
         render();
       });
-      rp.appendChild(lbl);
+      rp.appendChild(el);
     });
 
     /* Class pills */
@@ -659,7 +642,6 @@
       const el = document.createElement('span');
       el.className = `filter-pill cls-${key}`;
       el.textContent = cls;
-      el.dataset.cls = key;
       el.addEventListener('click', () => {
         const active = el.classList.toggle('on');
         active ? activeClasses.add(key) : activeClasses.delete(key);
@@ -675,13 +657,27 @@
       const el = document.createElement('span');
       el.className = 'filter-pill';
       el.textContent = type;
-      el.dataset.type = key;
       el.addEventListener('click', () => {
         const active = el.classList.toggle('on');
         active ? activeTypes.add(key) : activeTypes.delete(key);
         render();
       });
       tp.appendChild(el);
+    });
+
+    /* SubType pills */
+    const sp = document.getElementById('subtypePanel');
+    ALL_SUBTYPES.forEach(sub => {
+      const key = sub.toLowerCase();
+      const el = document.createElement('span');
+      el.className = 'filter-pill';
+      el.textContent = sub;
+      el.addEventListener('click', () => {
+        const active = el.classList.toggle('on');
+        active ? activeSubtypes.add(key) : activeSubtypes.delete(key);
+        render();
+      });
+      sp.appendChild(el);
     });
 
     /* Global listeners */
@@ -697,13 +693,27 @@
 
     return items
       .filter(it => {
-        if (!activeRarities.has((it.rarity||'').toLowerCase())) return false;
-        if (activeClasses.size && !activeClasses.has((it.class||'').toLowerCase())) return false;
-        if (activeTypes.size  && !activeTypes.has((it.itemType||'').toLowerCase()))  return false;
+        const rar = (it.rarity   || '').toLowerCase();
+        const cls = (it.class    || '').toLowerCase();
+        const typ = (it.itemType || '').toLowerCase();
+        const sub = (it.subType  || '').toLowerCase();
+        if (activeRarities.size && !activeRarities.has(rar)) return false;
+        if (activeClasses.size  && !activeClasses.has(cls))  return false;
+        if (activeTypes.size    && !activeTypes.has(typ))    return false;
+        if (activeSubtypes.size && !activeSubtypes.has(sub)) return false;
         if (q && !it.name.toLowerCase().includes(q) && !(it.description||'').toLowerCase().includes(q)) return false;
         return true;
       })
-      .sort((a, b) => (RARITY_RANK[a.rarity]??9) - (RARITY_RANK[b.rarity]??9));
+      .sort((a, b) => {
+        // Primary: rarity (god first)
+        const rd = (RARITY_RANK[a.rarity]??9) - (RARITY_RANK[b.rarity]??9);
+        if (rd !== 0) return rd;
+        // Secondary: class order
+        const cd = (CLASS_RANK[(a.class||'').toLowerCase()]??99) - (CLASS_RANK[(b.class||'').toLowerCase()]??99);
+        if (cd !== 0) return cd;
+        // Tertiary: id
+        return (a.id||0) - (b.id||0);
+      });
   }
 
   /* ── Render grid ── */
@@ -720,10 +730,10 @@
     }
 
     list.forEach((it, i) => {
-      const rar   = (it.rarity  || '').toLowerCase();
-      const cls   = (it.class   || '').toLowerCase();
-      const sub   = it.subType  || '';
-      const card  = document.createElement('div');
+      const rar  = (it.rarity  || '').toLowerCase();
+      const cls  = (it.class   || '').toLowerCase();
+      const sub  = it.subType  || '';
+      const card = document.createElement('div');
       card.className = `card ${rar}`;
       card.style.animationDelay = `${Math.min(i * 0.035, 0.4)}s`;
 
@@ -789,6 +799,7 @@
         setTimeout(() => { btn.textContent = '⎘ Copy'; btn.classList.remove('copied'); }, 2000);
       });
     });
+
     document.getElementById('backdrop').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
@@ -805,10 +816,10 @@
 
   function clearAll() {
     document.getElementById('q').value = '';
-    activeRarities = new Set(RARITIES);
+    activeRarities.clear();
     activeClasses.clear();
     activeTypes.clear();
-    document.querySelectorAll('[data-r]').forEach(el => el.checked = true);
+    activeSubtypes.clear();
     document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('on'));
     render();
   }
