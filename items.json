@@ -330,7 +330,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "50t",
+    "price": "50t (Kwon)",
     "seller": "",
     "image": "images/god_thief_top_1.png",
     "description": "68 luk\n1916 atk"
@@ -378,7 +378,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Hat",
-    "price": "50t",
+    "price": "50t (Kwon)",
     "seller": "",
     "image": "images/139.png",
     "description": "95 luk, 2004 atk"
@@ -390,7 +390,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "50t",
+    "price": "50t (Kwon)",
     "seller": "",
     "image": "images/140.png",
     "description": "640 luk, 1965 atk"
@@ -426,7 +426,7 @@
     "class": "WATK",
     "itemType": "Symbol",
     "subType": "Arcane",
-    "price": "10t",
+    "price": "10t (Dooie)",
     "seller": "",
     "image": "images/149.png",
     "description": "1568 watk"
@@ -450,7 +450,7 @@
     "class": "WATK",
     "itemType": "Symbol",
     "subType": "Sacred",
-    "price": "8t",
+    "price": "8t (Dooie)",
     "seller": "",
     "image": "images/151.png",
     "description": "1450 watk"
@@ -462,7 +462,7 @@
     "class": "WATK",
     "itemType": "Symbol",
     "subType": "Sacred",
-    "price": "10t",
+    "price": "10t (Dooie)",
     "seller": "",
     "image": "images/152.png",
     "description": "1502 watk"
@@ -594,7 +594,7 @@
     "class": "WATK",
     "itemType": "Symbol",
     "subType": "Sacred",
-    "price": "10t",
+    "price": "10t (Dooie)",
     "seller": "",
     "image": "",
     "description": "1505 watk"
