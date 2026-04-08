@@ -136,7 +136,7 @@
 
     .filter-label {
       font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
+      font-size: 0.78rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--gold);
@@ -151,7 +151,7 @@
       border: 1px solid var(--border);
       color: var(--text);
       font-family: 'EB Garamond', serif;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       padding: 0.45rem 0.65rem;
       outline: none;
       border-radius: 2px;
@@ -174,9 +174,9 @@
 
     .filter-pill {
       font-family: 'Cinzel', serif;
-      font-size: 0.6rem;
+      font-size: 0.75rem;
       letter-spacing: 0.06em;
-      padding: 0.2rem 0.55rem;
+      padding: 0.25rem 0.6rem;
       border: 1px solid var(--border-hi);
       border-radius: 2px;
       color: var(--text-dim);
@@ -236,7 +236,7 @@
     /* ─── Item grid ─── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
     }
 
@@ -290,7 +290,7 @@
       position: absolute;
       top: 7px; right: 7px;
       font-family: 'Cinzel', serif;
-      font-size: 0.52rem;
+      font-size: 0.68rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       padding: 0.18rem 0.45rem;
@@ -317,17 +317,25 @@
       margin-bottom: 0.45rem;
     }
 
-    /* Badges row — class + subtype */
+    /* Badges overlay — pinned to bottom of image */
     .card-badges {
+      position: absolute;
+      bottom: 7px;
+      right: 7px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.22rem;
-      margin-bottom: 0.5rem;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+
+    /* Badges on cards get a dark bg for readability over image */
+    .card-badges .badge {
+      background: rgba(5,3,2,0.82);
     }
 
     .badge {
       font-family: 'Cinzel', serif;
-      font-size: 0.52rem;
+      font-size: 0.68rem;
       letter-spacing: 0.06em;
       padding: 0.12rem 0.38rem;
       border: 1px solid;
@@ -595,6 +603,13 @@
   const CLASSES     = ['Warrior','Mage','Thief','Archer','Pirate','WATK','MATK'];
   const CLASS_RANK  = {warrior:0, mage:1, thief:2, archer:3, pirate:4, watk:5, matk:6};
 
+  const SUBTYPE_RANK = {
+    'hat':0, 'top':1, 'pants':2, 'cape':3, 'glove':4, 'shoe':5,
+    'primary':6, 'secondary':7,
+    'mitras':8,
+    'arcane':9, 'sacred':10, 'grand authentic':11
+  };
+
   const ITEM_TYPES  = ['Armor','Weapon','Emblem','Symbol'];
   const TYPE_SUBS   = {
     armor:  ['Hat','Top','Pants','Cape','Glove','Shoe'],
@@ -711,7 +726,10 @@
         // Secondary: class order
         const cd = (CLASS_RANK[(a.class||'').toLowerCase()]??99) - (CLASS_RANK[(b.class||'').toLowerCase()]??99);
         if (cd !== 0) return cd;
-        // Tertiary: id
+        // Tertiary: subtype order
+        const sd = (SUBTYPE_RANK[(a.subType||'').toLowerCase()]??99) - (SUBTYPE_RANK[(b.subType||'').toLowerCase()]??99);
+        if (sd !== 0) return sd;
+        // Quaternary: id
         return (a.id||0) - (b.id||0);
       });
   }
@@ -742,13 +760,13 @@
 
       card.innerHTML = `
         <div class="thumb">
-          <img src="${esc(it.image||'')}" alt="${esc(it.name)}" loading="lazy"
+          <img src="${esc(it.image||`images/${it.id}.png`)}" alt="${esc(it.name)}" loading="lazy"
                onerror="this.src='https://placehold.co/300x450/110e09/261e12?text=No+Image'">
           <span class="rarity-badge ${rar}">${rar.toUpperCase()}</span>
+          <div class="card-badges">${clsBadge}${subBadge}</div>
         </div>
         <div class="card-body">
           <div class="card-name">${esc(it.name)}</div>
-          <div class="card-badges">${clsBadge}${subBadge}</div>
           <div class="card-footer">
             <div class="price">${esc(it.price||'—')}</div>
           </div>
@@ -772,7 +790,7 @@
 
     modal.innerHTML = `
       <div class="modal-img-col">
-        <img src="${esc(it.image||'')}" alt="${esc(it.name)}"
+        <img src="${esc(it.image||`images/${it.id}.png`)}" alt="${esc(it.name)}"
              onerror="this.src='https://placehold.co/300x450/110e09/261e12?text=No+Image'">
       </div>
       <div class="modal-info-col">
