@@ -174,9 +174,9 @@
 
     .filter-pill {
       font-family: 'Cinzel', serif;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
       letter-spacing: 0.06em;
-      padding: 0.25rem 0.6rem;
+      padding: 0.20rem 0.5rem;
       border: 1px solid var(--border-hi);
       border-radius: 2px;
       color: var(--text-dim);
@@ -793,7 +793,7 @@
         <div class="modal-desc">${esc(it.description||'No description available.')}</div>
         <div class="modal-footer">
           <div class="modal-price">${esc(it.price||'—')}</div>
-          <button class="copy-btn" id="copyBtn" title="Copy item details">⎘ Copy</button>
+          <button class="copy-btn" id="copyBtn" title="Copy item details">Copy</button>
         </div>
       </div>`;
 
@@ -804,7 +804,7 @@
       const text = `${rar.toUpperCase()}\n${it.name}\n${it.price||'—'}\n${desc}`.trim();
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.getElementById('copyBtn');
-        btn.textContent = '✓ Copied!';
+        btn.textContent = 'Copied!';
         btn.classList.add('copied');
         setTimeout(() => { btn.textContent = '⎘ Copy'; btn.classList.remove('copied'); }, 2000);
       });
