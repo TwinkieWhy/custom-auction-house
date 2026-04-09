@@ -371,18 +371,7 @@
     "image": "",
     "description": "743 str, +1606 watk roll"
   },
-  {
-    "id": 140,
-    "name": "Eternal Thief Pants",
-    "rarity": "god",
-    "class": "Thief",
-    "itemType": "Armor",
-    "subType": "Pants",
-    "price": "50t (NTR)",
-    "seller": "RESERVED",
-    "image": "",
-    "description": "640 luk, 1965 watk"
-  },
+
   {
     "id": 141,
     "name": "Eternal Knight Shoes",
