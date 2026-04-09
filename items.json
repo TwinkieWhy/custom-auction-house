@@ -330,7 +330,7 @@
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "50t (Kwon)",
+    "price": "50t",
     "seller": "",
     "image": "images/god_thief_top_1.png",
     "description": "68 luk\n1916 atk"
@@ -372,25 +372,13 @@
     "description": "743 str, +1606 atk roll"
   },
   {
-    "id": 139,
-    "name": "Eternal Thief Bandana",
-    "rarity": "god",
-    "class": "Thief",
-    "itemType": "Armor",
-    "subType": "Hat",
-    "price": "50t (Kwon)",
-    "seller": "",
-    "image": "images/139.png",
-    "description": "95 luk, 2004 atk"
-  },
-  {
     "id": 140,
     "name": "Eternal Thief Pants",
     "rarity": "god",
     "class": "Thief",
     "itemType": "Armor",
     "subType": "Pants",
-    "price": "50t (Kwon)",
+    "price": "50t (NTR)",
     "seller": "",
     "image": "images/140.png",
     "description": "640 luk, 1965 atk"
