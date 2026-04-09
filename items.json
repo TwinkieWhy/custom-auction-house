@@ -8,7 +8,7 @@
     "subType": "Glove",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_archer_glove.png",
+    "image": "",
     "description": "620 dex, 1565 watk, temu-lite"
   },
   {
@@ -20,7 +20,7 @@
     "subType": "Mitras",
     "price": "25t",
     "seller": "",
-    "image": "images/4v_archer_mitras.png",
+    "image": "",
     "description": "1516 dex, 1769 watk"
   },
   {
@@ -32,7 +32,7 @@
     "subType": "Mitras",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_archer_mitras_1.png",
+    "image": "",
     "description": "579 dex, 1674 watk"
   },
   {
@@ -44,7 +44,7 @@
     "subType": "Shoe",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_archer_shoe.png",
+    "image": "",
     "description": "83 dex, 1645 watk"
   },
   {
@@ -56,7 +56,7 @@
     "subType": "Shoe",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_archer_shoe_1.png",
+    "image": "",
     "description": "992 dex, 1670 watk"
   },
   {
@@ -68,7 +68,7 @@
     "subType": "Top",
     "price": "25t",
     "seller": "",
-    "image": "images/4v_archer_top.png",
+    "image": "",
     "description": "1033 dex, 1719 watk"
   },
   {
@@ -80,7 +80,7 @@
     "subType": "Cape",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_mage_cape.png",
+    "image": "",
     "description": "566 int, 1611 matk"
   },
   {
@@ -92,7 +92,7 @@
     "subType": "Mitras",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_mage_mitras.png",
+    "image": "",
     "description": "873 int, 1739 matk"
   },
   {
@@ -104,7 +104,7 @@
     "subType": "Mitras",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_mage_mitras_1.png",
+    "image": "",
     "description": "70 int, 1662 matk"
   },
   {
@@ -116,7 +116,7 @@
     "subType": "Mitras",
     "price": "18t",
     "seller": "",
-    "image": "images/4v_mage_mitras_2.png",
+    "image": "",
     "description": "1211 int, 1636 matk"
   },
   {
@@ -128,7 +128,7 @@
     "subType": "Cape",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_pirate_cape.png",
+    "image": "",
     "description": "1422 str, 1729 watk"
   },
   {
@@ -140,7 +140,7 @@
     "subType": "Cape",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_pirate_cape_1.png",
+    "image": "",
     "description": "1114 dex, 1635 watk"
   },
   {
@@ -152,7 +152,7 @@
     "subType": "Hat",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_pirate_hat.png",
+    "image": "",
     "description": "1233 str, 1625 watk"
   },
   {
@@ -164,7 +164,7 @@
     "subType": "Hat",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_pirate_hat_1.png",
+    "image": "",
     "description": "1050 str, 1751 watk"
   },
   {
@@ -176,7 +176,7 @@
     "subType": "Mitras",
     "price": "10t",
     "seller": "",
-    "image": "images/4v_pirate_mitras.png",
+    "image": "",
     "description": "1663 watk"
   },
   {
@@ -188,7 +188,7 @@
     "subType": "Pants",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_pirate_pants.png",
+    "image": "",
     "description": "1115 str, 1647 watk"
   },
   {
@@ -200,7 +200,7 @@
     "subType": "Pants",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_pirate_pants_1.png",
+    "image": "",
     "description": "608 dex, 1733 watk"
   },
   {
@@ -212,7 +212,7 @@
     "subType": "Pants",
     "price": "15t",
     "seller": "",
-    "image": "images/4v_pirate_pants_2.png",
+    "image": "",
     "description": "1506 dex, 1634 watk"
   },
   {
@@ -224,7 +224,7 @@
     "subType": "Shoe",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_pirate_shoe.png",
+    "image": "",
     "description": "566 str, 1805 watk"
   },
   {
@@ -236,7 +236,7 @@
     "subType": "Top",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_pirate_top.png",
+    "image": "",
     "description": "1170 dex, 1758 watk"
   },
   {
@@ -248,7 +248,7 @@
     "subType": "Cape",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_thief_cape.png",
+    "image": "",
     "description": "625 luk, 1728 watk"
   },
   {
@@ -260,7 +260,7 @@
     "subType": "Hat",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_thief_hat.png",
+    "image": "",
     "description": "632 luk, 1735 watk"
   },
   {
@@ -272,7 +272,7 @@
     "subType": "Mitras",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_thief_mitras.png",
+    "image": "",
     "description": "1517 luk, 1759 watk"
   },
   {
@@ -284,7 +284,7 @@
     "subType": "Top",
     "price": "18t",
     "seller": "",
-    "image": "images/4v_thief_top.png",
+    "image": "",
     "description": "69 luk, 1739 watk"
   },
   {
@@ -296,7 +296,7 @@
     "subType": "Hat",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_warrior_hat_1.png",
+    "image": "",
     "description": "972 str, 1660 watk"
   },
   {
@@ -308,7 +308,7 @@
     "subType": "Shoe",
     "price": "20t",
     "seller": "",
-    "image": "images/4v_warrior_shoes_1.png",
+    "image": "",
     "description": "1035 str, 1647 watk"
   },
   {
@@ -320,7 +320,7 @@
     "subType": "Top",
     "price": "20t",
     "seller": "",
-    "image": "images/god_thief_top.png",
+    "image": "",
     "description": "813 luk, 1638 watk, temu-lite"
   },
   {
@@ -332,7 +332,7 @@
     "subType": "Top",
     "price": "50t",
     "seller": "",
-    "image": "images/god_thief_top_1.png",
+    "image": "",
     "description": "68 luk, 1916 watk"
   },
   {
