@@ -9,7 +9,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_archer_glove.png",
-    "description": "620 dex, 1565 atk, temu-lite"
+    "description": "620 dex, 1565 watk, temu-lite"
   },
   {
     "id": 101,
@@ -21,7 +21,7 @@
     "price": "25t",
     "seller": "",
     "image": "images/4v_archer_mitras.png",
-    "description": "1516 dex, 1769 atk"
+    "description": "1516 dex, 1769 watk"
   },
   {
     "id": 102,
@@ -33,7 +33,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_archer_mitras_1.png",
-    "description": "579 dex, 1674 atk"
+    "description": "579 dex, 1674 watk"
   },
   {
     "id": 103,
@@ -45,7 +45,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_archer_shoe.png",
-    "description": "83 dex, 1645 atk"
+    "description": "83 dex, 1645 watk"
   },
   {
     "id": 104,
@@ -57,7 +57,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_archer_shoe_1.png",
-    "description": "992 dex, 1670 atk"
+    "description": "992 dex, 1670 watk"
   },
   {
     "id": 105,
@@ -69,7 +69,7 @@
     "price": "25t",
     "seller": "",
     "image": "images/4v_archer_top.png",
-    "description": "1033 dex, 1719 atk"
+    "description": "1033 dex, 1719 watk"
   },
   {
     "id": 106,
@@ -129,7 +129,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_cape.png",
-    "description": "1422 str, 1729 atk"
+    "description": "1422 str, 1729 watk"
   },
   {
     "id": 111,
@@ -141,7 +141,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_cape_1.png",
-    "description": "1114 dex, 1635 atk"
+    "description": "1114 dex, 1635 watk"
   },
   {
     "id": 112,
@@ -153,7 +153,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_hat.png",
-    "description": "1233 str, 1625 atk"
+    "description": "1233 str, 1625 watk"
   },
   {
     "id": 113,
@@ -165,7 +165,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_hat_1.png",
-    "description": "1050 str, 1751 atk"
+    "description": "1050 str, 1751 watk"
   },
   {
     "id": 114,
@@ -177,7 +177,7 @@
     "price": "10t",
     "seller": "",
     "image": "images/4v_pirate_mitras.png",
-    "description": "1663 atk"
+    "description": "1663 watk"
   },
   {
     "id": 115,
@@ -189,7 +189,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_pants.png",
-    "description": "1115 str, 1647 atk"
+    "description": "1115 str, 1647 watk"
   },
   {
     "id": 116,
@@ -213,7 +213,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/4v_pirate_pants_2.png",
-    "description": "1506 dex, 1634 atk"
+    "description": "1506 dex, 1634 watk"
   },
   {
     "id": 118,
@@ -225,7 +225,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_shoe.png",
-    "description": "566 str, 1805 atk"
+    "description": "566 str, 1805 watk"
   },
   {
     "id": 119,
@@ -237,7 +237,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_pirate_top.png",
-    "description": "1170 dex, 1758 atk"
+    "description": "1170 dex, 1758 watk"
   },
   {
     "id": 120,
@@ -249,7 +249,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_thief_cape.png",
-    "description": "625 luk, 1728 atk"
+    "description": "625 luk, 1728 watk"
   },
   {
     "id": 121,
@@ -261,7 +261,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_thief_hat.png",
-    "description": "632 luk, 1735 atk"
+    "description": "632 luk, 1735 watk"
   },
   {
     "id": 122,
@@ -273,7 +273,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_thief_mitras.png",
-    "description": "1517 luk, 1759 atk"
+    "description": "1517 luk, 1759 watk"
   },
   {
     "id": 123,
@@ -285,7 +285,7 @@
     "price": "18t",
     "seller": "",
     "image": "images/4v_thief_top.png",
-    "description": "69 luk, 1739 atk"
+    "description": "69 luk, 1739 watk"
   },
   {
     "id": 126,
@@ -297,7 +297,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_warrior_hat_1.png",
-    "description": "972 str, 1660 atk"
+    "description": "972 str, 1660 watk"
   },
   {
     "id": 129,
@@ -309,7 +309,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/4v_warrior_shoes_1.png",
-    "description": "1035 str, 1647 atk"
+    "description": "1035 str, 1647 watk"
   },
   {
     "id": 132,
@@ -321,7 +321,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/god_thief_top.png",
-    "description": "813 luk, 1638 atk, temu-lite"
+    "description": "813 luk, 1638 watk, temu-lite"
   },
   {
     "id": 133,
@@ -333,7 +333,7 @@
     "price": "50t",
     "seller": "",
     "image": "images/god_thief_top_1.png",
-    "description": "68 luk, 1916 atk"
+    "description": "68 luk, 1916 watk"
   },
   {
     "id": 135,
@@ -345,7 +345,7 @@
     "price": "25t",
     "seller": "",
     "image": "images/135.png",
-    "description": "926 dex, 1795 atk"
+    "description": "926 dex, 1795 watk"
   },
   {
     "id": 136,
@@ -357,7 +357,7 @@
     "price": "20t",
     "seller": "",
     "image": "images/136.png",
-    "description": "1051 luk, 1788 atk"
+    "description": "1051 luk, 1788 watk"
   },
   {
     "id": 137,
@@ -369,7 +369,7 @@
     "price": "15t",
     "seller": "",
     "image": "images/137.png",
-    "description": "743 str, +1606 atk roll"
+    "description": "743 str, +1606 watk roll"
   },
   {
     "id": 140,
@@ -381,7 +381,7 @@
     "price": "50t (NTR)",
     "seller": "",
     "image": "images/140.png",
-    "description": "640 luk, 1965 atk"
+    "description": "640 luk, 1965 watk"
   },
   {
     "id": 141,
@@ -393,7 +393,7 @@
     "price": "10t",
     "seller": "",
     "image": "images/141.png",
-    "description": "68 str, 1513 atk"
+    "description": "68 str, 1513 watk"
   },
   {
     "id": 143,
@@ -453,7 +453,7 @@
     "price": "5t",
     "seller": "",
     "image": "",
-    "description": "1207 atk"
+    "description": "1207 watk"
   },
   {
     "id": 156,
@@ -465,7 +465,7 @@
     "price": "5t",
     "seller": "",
     "image": "",
-    "description": "1208 atk"
+    "description": "1208 watk"
   },
   {
     "id": 157,
@@ -477,7 +477,7 @@
     "price": "5t",
     "seller": "",
     "image": "",
-    "description": "1288 atk"
+    "description": "1288 watk"
   },
   {
     "id": 158,
@@ -501,7 +501,7 @@
     "price": "5t",
     "seller": "",
     "image": "",
-    "description": "65 str, 1307 atk"
+    "description": "65 str, 1307 watk"
   },
   {
     "id": 160,
