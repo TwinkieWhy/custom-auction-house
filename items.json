@@ -420,18 +420,6 @@
     "description": "1086 watk"
   },
   {
-    "id": 149,
-    "name": "Arcane Symbol: Chu Chu Island",
-    "rarity": "vvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "10t (Dooie)",
-    "seller": "",
-    "image": "images/149.png",
-    "description": "1568 watk"
-  },
-  {
     "id": 150,
     "name": "Destiny Sword",
     "rarity": "vvvvip",
@@ -442,30 +430,6 @@
     "seller": "",
     "image": "images/150.png",
     "description": "873 str, 1923 watk"
-  },
-  {
-    "id": 151,
-    "name": "Sacred Symbol: Arteria",
-    "rarity": "vvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "8t (Dooie)",
-    "seller": "",
-    "image": "images/151.png",
-    "description": "1450 watk"
-  },
-  {
-    "id": 152,
-    "name": "Sacred Symbol: Shangri-La",
-    "rarity": "vvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "10t (Dooie)",
-    "seller": "",
-    "image": "images/152.png",
-    "description": "1502 watk"
   },
   {
     "id": 153,
@@ -586,18 +550,6 @@
     "seller": "",
     "image": "",
     "description": "1144 str, 2021 watk"
-  },
-  {
-    "id": 163,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "vvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "10t (Dooie)",
-    "seller": "",
-    "image": "",
-    "description": "1505 watk"
   },
   {
     "id": 164,
