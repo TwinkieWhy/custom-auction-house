@@ -517,18 +517,6 @@
     "description": "1144 str, 2021 watk"
   },
   {
-    "id": 164,
-    "name": "Grand Authentic Symbol: Geared Rock",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Grand Authentic",
-    "price": "12t",
-    "seller": "",
-    "image": "",
-    "description": "941 watk"
-  },
-  {
     "id": 165,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvip",
