@@ -324,18 +324,6 @@
     "description": "813 luk, 1638 watk, temu-lite"
   },
   {
-    "id": 133,
-    "name": "Eternal Thief Shirt",
-    "rarity": "god",
-    "class": "Thief",
-    "itemType": "Armor",
-    "subType": "Top",
-    "price": "50t",
-    "seller": "",
-    "image": "",
-    "description": "68 luk, 1916 watk"
-  },
-  {
     "id": 135,
     "name": "Princess No's Floral Jewel",
     "rarity": "vvvvip",
