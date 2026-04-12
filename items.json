@@ -373,18 +373,6 @@
     "description": "68 str, 1513 watk"
   },
   {
-    "id": 143,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "5t",
-    "seller": "",
-    "image": "",
-    "description": "1086 watk"
-  },
-  {
     "id": 150,
     "name": "Destiny Sword",
     "rarity": "vvvvip",
@@ -419,42 +407,6 @@
     "seller": "",
     "image": "",
     "description": "870 dex, 2104 watk"
-  },
-  {
-    "id": 155,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "5t",
-    "seller": "",
-    "image": "",
-    "description": "1207 watk"
-  },
-  {
-    "id": 156,
-    "name": "Arcane Symbol: Arcana",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "5t",
-    "seller": "",
-    "image": "",
-    "description": "1208 watk"
-  },
-  {
-    "id": 157,
-    "name": "Arcane Symbol: Chu Chu Island",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "5t",
-    "seller": "",
-    "image": "",
-    "description": "1288 watk"
   },
   {
     "id": 158,
