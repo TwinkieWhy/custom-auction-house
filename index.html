@@ -305,6 +305,19 @@
     .rarity-badge.vvvvip { color: var(--vvvvip); border-color: rgba(255,34,153,0.6); }
     .rarity-badge.god    { color: var(--god);    border-color: rgba(255,215,0,0.6); }
 
+    .id-badge {
+      position: absolute;
+      bottom: 7px; left: 7px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      background: rgba(5,3,2,0.65);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.14rem 0.38rem;
+      border-radius: 2px;
+    }
+
     /* Card body */
     .card-body { padding: 0.65rem 0.75rem 0.75rem; }
 
@@ -758,6 +771,7 @@
           <img src="${esc(it.image||`images/${it.id}.png`)}" alt="${esc(it.name)}" loading="lazy"
                onerror="this.src='https://placehold.co/300x450/110e09/261e12?text=No+Image'">
           <span class="rarity-badge ${rar}">${rar.toUpperCase()}</span>
+          <span class="id-badge">#${it.id}</span>
         </div>
         <div class="card-body">
           <div class="card-name">${esc(it.name)}</div>
@@ -793,6 +807,7 @@
         <div class="modal-badges">${clsBadge}${typeBadge}${subBadge}</div>
         <div class="modal-rarity" style="color:var(--${rar})">${rar.toUpperCase()}</div>
         <div class="modal-name">${esc(it.name)}</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.65rem;color:var(--text-dim);letter-spacing:0.1em">ID #${it.id}</div>
         <div class="modal-desc">${esc(it.description||'No description available.')}</div>
         <div class="modal-footer">
           <div class="modal-price">${esc(it.price||'—')}</div>
@@ -804,7 +819,7 @@
 
     document.getElementById('copyBtn').addEventListener('click', () => {
       const desc = (it.description || '').replace(/\n/g, ', ');
-      const text = `${rar.toUpperCase()}\n${it.name}\n${it.price||'—'}\n${desc}`.trim();
+      const text = `${rar.toUpperCase()}\n${it.name}\n${it.price||'—'}\n${desc}\nID #${it.id}`.trim();
       navigator.clipboard.writeText(text).then(() => {
         const btn = document.getElementById('copyBtn');
         btn.textContent = '⎘ Copied!';
