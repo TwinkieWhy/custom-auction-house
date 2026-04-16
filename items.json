@@ -397,18 +397,6 @@
     "description": "598 str, 1703 watk"
   },
   {
-    "id": 172,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "25t",
-    "seller": "",
-    "image": "",
-    "description": "1707 watk"
-  },
-  {
     "id": 173,
     "name": "Destiny Lapis",
     "rarity": "vvvvip",
