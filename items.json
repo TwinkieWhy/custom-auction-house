@@ -503,5 +503,77 @@
     "seller": "",
     "image": "",
     "description": "855 str, 1692 watk"
+  },
+  {
+    "id": 178,
+    "name": "Eternal Mage Robe",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Top",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "55 int, 1662 matk"
+  },
+  {
+    "id": 179,
+    "name": "Eternal Mage Pants",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Pants",
+    "price": "18t",
+    "seller": "",
+    "image": "",
+    "description": "849 int, 1699 matk"
+  },
+  {
+    "id": 180,
+    "name": "Eternal Mage Pants",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Pants",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "753 int, 1636 matk"
+  },
+  {
+    "id": 181,
+    "name": "Eternal Mage Cape",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "97 int, 1730 matk"
+  },
+  {
+    "id": 182,
+    "name": "Eternal Mage Cape",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "576 int, 1635 matk"
+  },
+  {
+    "id": 183,
+    "name": "Eternal Mage Cape",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "557 int, 1676 matk",
+    "seller": "",
+    "image": "",
+    "description": ""
   }
 ]
