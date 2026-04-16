@@ -6,7 +6,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Glove",
-    "price": "15t",
+    "price": "15t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "620 dex, 1565 watk, temu-lite"
@@ -18,7 +18,7 @@
     "class": "Archer",
     "itemType": "Emblem",
     "subType": "Mitras",
-    "price": "25t",
+    "price": "25t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "1516 dex, 1769 watk"
@@ -54,7 +54,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Shoe",
-    "price": "20t",
+    "price": "20t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "992 dex, 1670 watk"
@@ -66,7 +66,7 @@
     "class": "Archer",
     "itemType": "Armor",
     "subType": "Top",
-    "price": "25t",
+    "price": "25t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "1033 dex, 1719 watk"
@@ -306,7 +306,7 @@
     "class": "Archer",
     "itemType": "Weapon",
     "subType": "Secondary",
-    "price": "25t",
+    "price": "25t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "926 dex, 1795 watk"
@@ -367,7 +367,7 @@
     "class": "Archer",
     "itemType": "Weapon",
     "subType": "Primary",
-    "price": "25t",
+    "price": "25t - ZUDO (R)",
     "seller": "",
     "image": "",
     "description": "870 dex, 2104 watk"
