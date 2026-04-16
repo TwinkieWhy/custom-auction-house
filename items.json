@@ -397,18 +397,6 @@
     "description": "598 str, 1703 watk"
   },
   {
-    "id": 169,
-    "name": "Grand Authentic Symbol: Geared Rock",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Grand Authentic",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1798 watk"
-  },
-  {
     "id": 172,
     "name": "Sacred Symbol: Odium",
     "rarity": "vvvvip",
