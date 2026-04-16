@@ -240,18 +240,6 @@
     "description": "1170 dex, 1758 watk"
   },
   {
-    "id": 120,
-    "name": "Eternal Thief Cape",
-    "rarity": "vvvvip",
-    "class": "Thief",
-    "itemType": "Armor",
-    "subType": "Cape",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "625 luk, 1728 watk"
-  },
-  {
     "id": 121,
     "name": "Eternal Thief Bandana",
     "rarity": "vvvvip",
@@ -262,18 +250,6 @@
     "seller": "",
     "image": "",
     "description": "632 luk, 1735 watk"
-  },
-  {
-    "id": 122,
-    "name": "Mitra's Rage: Thief",
-    "rarity": "vvvvip",
-    "class": "Thief",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1517 luk, 1759 watk"
   },
   {
     "id": 123,
