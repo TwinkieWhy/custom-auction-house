@@ -409,30 +409,6 @@
     "description": "1798 watk"
   },
   {
-    "id": 170,
-    "name": "Grand Authentic Symbol: Tallahart",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Grand Authentic",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1658 dex, 1784 watk"
-  },
-  {
-    "id": 171,
-    "name": "Arcane Symbol: Chu Chu Island",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1636 watk"
-  },
-  {
     "id": 172,
     "name": "Sacred Symbol: Odium",
     "rarity": "vvvvip",
