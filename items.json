@@ -395,5 +395,113 @@
     "seller": "",
     "image": "",
     "description": "598 str, 1703 watk"
+  },
+  {
+    "id": 169,
+    "name": "Grand Authentic Symbol: Geared Rock",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Grand Authentic",
+    "price": "80t",
+    "seller": "",
+    "image": "",
+    "description": "1798 watk"
+  },
+  {
+    "id": 170,
+    "name": "Grand Authentic Symbol: Tallahart",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Grand Authentic",
+    "price": "80t",
+    "seller": "",
+    "image": "",
+    "description": "1658 dex, 1784 watk"
+  },
+  {
+    "id": 171,
+    "name": "Arcane Symbol: Chu Chu Island",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Arcane",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "1636 watk"
+  },
+  {
+    "id": 172,
+    "name": "Sacred Symbol: Odium",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "25t",
+    "seller": "",
+    "image": "",
+    "description": "1707 watk"
+  },
+  {
+    "id": 173,
+    "name": "Destiny Lapis",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "191 str, 1976 watk"
+  },
+  {
+    "id": 174,
+    "name": "Destiny Lapis",
+    "rarity": "god",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "40t",
+    "seller": "",
+    "image": "",
+    "description": "902 str, 2224 watk (red flamed base)"
+  },
+  {
+    "id": 175,
+    "name": "Eternal Knight Shoes",
+    "rarity": "vvvip",
+    "class": "Warrior",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "685 str, 1485 watk"
+  },
+  {
+    "id": 176,
+    "name": "Eternal Knight Shoes",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "59 str, 1621 watk"
+  },
+  {
+    "id": 177,
+    "name": "Princess No's Imugi Gem",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Secondary",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "855 str, 1692 watk"
   }
 ]
