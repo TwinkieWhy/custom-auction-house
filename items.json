@@ -349,18 +349,6 @@
     "description": "68 str, 1513 watk"
   },
   {
-    "id": 150,
-    "name": "Destiny Sword",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Weapon",
-    "subType": "Primary",
-    "price": "15t",
-    "seller": "",
-    "image": "",
-    "description": "873 str, 1923 watk"
-  },
-  {
     "id": 153,
     "name": "Eternal Thief Bandana",
     "rarity": "vvvip",
