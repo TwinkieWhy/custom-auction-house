@@ -313,18 +313,6 @@
     "description": "1157 int, 1978 matk"
   },
   {
-    "id": 159,
-    "name": "Eternal Knight Armor",
-    "rarity": "vvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Top",
-    "price": "5t",
-    "seller": "",
-    "image": "",
-    "description": "65 str, 1307 watk"
-  },
-  {
     "id": 160,
     "name": "Eternal Mage Cape",
     "rarity": "vvip",
