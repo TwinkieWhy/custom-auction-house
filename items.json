@@ -1,29 +1,5 @@
 [
   {
-    "id": 100,
-    "name": "Eternal Archer Gloves",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Armor",
-    "subType": "Glove",
-    "price": "15t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "620 dex, 1565 watk, temu-lite"
-  },
-  {
-    "id": 101,
-    "name": "Mitra's Rage: Bowman",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "25t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "1516 dex, 1769 watk"
-  },
-  {
     "id": 102,
     "name": "Mitra's Rage: Bowman",
     "rarity": "vvvvip",
@@ -46,30 +22,6 @@
     "seller": "",
     "image": "",
     "description": "83 dex, 1645 watk"
-  },
-  {
-    "id": 104,
-    "name": "Eternal Archer Shoes",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "20t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "992 dex, 1670 watk"
-  },
-  {
-    "id": 105,
-    "name": "Eternal Archer Hood",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Armor",
-    "subType": "Top",
-    "price": "25t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "1033 dex, 1719 watk"
   },
   {
     "id": 106,
@@ -300,18 +252,6 @@
     "description": "813 luk, 1638 watk, temu-lite"
   },
   {
-    "id": 135,
-    "name": "Princess No's Floral Jewel",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Weapon",
-    "subType": "Secondary",
-    "price": "25t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "926 dex, 1795 watk"
-  },
-  {
     "id": 136,
     "name": "Eternal Thief Shoes",
     "rarity": "vvvvip",
@@ -359,18 +299,6 @@
     "seller": "",
     "image": "",
     "description": "806 luk, 1523 watk"
-  },
-  {
-    "id": 154,
-    "name": "Destiny Bow",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Weapon",
-    "subType": "Primary",
-    "price": "25t - ZUDO (R)",
-    "seller": "",
-    "image": "",
-    "description": "870 dex, 2104 watk"
   },
   {
     "id": 158,
