@@ -539,5 +539,17 @@
     "seller": "",
     "image": "",
     "description": "1756 watk"
+  },
+  {
+    "id": 185,
+    "name": "Grand Authentic Symbol: Geared Rock",
+    "rarity": "god",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Grand Authentic",
+    "price": "80t",
+    "seller": "",
+    "image": "",
+    "description": "1857 watk"
   }
 ]
