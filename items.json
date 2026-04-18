@@ -671,5 +671,29 @@
     "seller": "",
     "image": "",
     "description": "1645 watk"
+  },
+  {
+    "id": 196,
+    "name": "Eternal Archer Hood",
+    "rarity": "god",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "Top",
+    "price": "70t",
+    "seller": "",
+    "image": "",
+    "description": "88 dex, 1988 watk"
+  },
+  {
+    "id": 197,
+    "name": "Eternal Archer Cape",
+    "rarity": "god",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "668 dex, 1530 watk, temu-lite"
   }
 ]
