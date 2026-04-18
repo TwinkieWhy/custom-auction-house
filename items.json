@@ -625,18 +625,6 @@
     "description": "1772 matk"
   },
   {
-    "id": 192,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1617 watk"
-  },
-  {
     "id": 193,
     "name": "Sacred Symbol: Shangri-La",
     "rarity": "vvvvip",
@@ -659,18 +647,6 @@
     "seller": "",
     "image": "",
     "description": "1925 matk"
-  },
-  {
-    "id": 195,
-    "name": "Sacred Symbol: Carcion",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1645 watk"
   },
   {
     "id": 196,
