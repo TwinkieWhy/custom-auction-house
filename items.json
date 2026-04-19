@@ -647,29 +647,5 @@
     "seller": "",
     "image": "",
     "description": "1925 matk"
-  },
-  {
-    "id": 197,
-    "name": "Eternal Archer Cape",
-    "rarity": "god",
-    "class": "Archer",
-    "itemType": "Armor",
-    "subType": "Cape",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "668 dex, 1530 watk, temu-lite"
-  },
-  {
-    "id": 198,
-    "name": "Arcane Symbol: Esfera",
-    "rarity": "god",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1809 watk"
   }
 ]
