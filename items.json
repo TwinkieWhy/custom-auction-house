@@ -589,18 +589,6 @@
     "description": "1137 str, 2108 watk"
   },
   {
-    "id": 189,
-    "name": "Arcane Symbol: Esfera",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1639 watk"
-  },
-  {
     "id": 190,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvvvip",
