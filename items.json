@@ -635,5 +635,17 @@
     "seller": "",
     "image": "",
     "description": "1925 matk"
+  },
+  {
+    "id": 195,
+    "name": "Sacred Symbol: Arcus",
+    "rarity": "god",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "60t",
+    "seller": "Flechette",
+    "image": "",
+    "description": "1857 watk"
   }
 ]
