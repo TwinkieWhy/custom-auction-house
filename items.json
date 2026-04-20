@@ -1,17 +1,5 @@
 [
   {
-    "id": 102,
-    "name": "Mitra's Rage: Bowman",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "579 dex, 1674 watk"
-  },
-  {
     "id": 103,
     "name": "Eternal Archer Shoes",
     "rarity": "vvvvip",
@@ -551,18 +539,6 @@
     "seller": "",
     "image": "",
     "description": "939 dex, 1926 atk"
-  },
-  {
-    "id": 186,
-    "name": "Princess No's Floral Jewel",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Weapon",
-    "subType": "Secondary",
-    "price": "15t",
-    "seller": "",
-    "image": "",
-    "description": "48 dex, 1714 atk"
   },
   {
     "id": 187,
