@@ -661,18 +661,6 @@
     "description": "926 luk, 1723 watk"
   },
   {
-    "id": 199,
-    "name": "Sacred Symbol: Shangri-La",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "35t",
-    "seller": "",
-    "image": "",
-    "description": "1770 watk"
-  },
-  {
     "id": 200,
     "name": "Sacred Symbol: Cernium",
     "rarity": "vvvvip",
@@ -779,18 +767,6 @@
     "seller": "",
     "image": "",
     "description": "1669 watk"
-  },
-  {
-    "id": 209,
-    "name": "Grand Authentic Symbol: Geared Rock",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Grand Authentic",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1679 watk"
   },
   {
     "id": 210,
