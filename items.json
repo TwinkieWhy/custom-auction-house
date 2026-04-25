@@ -263,19 +263,6 @@
     "image": "",
     "description": "743 str, +1606 watk roll"
   },
-
-  {
-    "id": 141,
-    "name": "Eternal Knight Shoes",
-    "rarity": "vvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "10t",
-    "seller": "",
-    "image": "",
-    "description": "68 str, 1513 watk"
-  },
   {
     "id": 153,
     "name": "Eternal Thief Bandana",
@@ -395,18 +382,6 @@
     "seller": "",
     "image": "",
     "description": "902 str, 2224 watk (red flamed base)"
-  },
-  {
-    "id": 175,
-    "name": "Eternal Knight Shoes",
-    "rarity": "vvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "10t",
-    "seller": "",
-    "image": "",
-    "description": "685 str, 1485 watk"
   },
   {
     "id": 176,
