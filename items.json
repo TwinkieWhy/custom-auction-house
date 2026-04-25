@@ -325,18 +325,6 @@
     "description": "208 int, 1431 matk"
   },
   {
-    "id": 162,
-    "name": "Destiny Two-Handed Sword",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Weapon",
-    "subType": "Primary",
-    "price": "25t",
-    "seller": "",
-    "image": "",
-    "description": "1144 str, 2021 watk"
-  },
-  {
     "id": 165,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvip",
@@ -625,18 +613,6 @@
     "description": "1795 watk"
   },
   {
-    "id": 196,
-    "name": "Eternal Knight Armor",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Top",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "925 str, 1776 watk"
-  },
-  {
     "id": 197,
     "name": "Eternal Archer Cape",
     "rarity": "vvvvip",
@@ -685,18 +661,6 @@
     "description": "1781 watk"
   },
   {
-    "id": 202,
-    "name": "Eternal Knight Shoes",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Shoe",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1118 str, 1807 watk"
-  },
-  {
     "id": 203,
     "name": "Eternal Archer Hat",
     "rarity": "vvvvip",
@@ -733,18 +697,6 @@
     "description": "758 luk, 1781 watk"
   },
   {
-    "id": 206,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "god",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1847 watk"
-  },
-  {
     "id": 207,
     "name": "Arcane Symbol: Vanishing Journey",
     "rarity": "vvvvip",
@@ -767,18 +719,6 @@
     "seller": "",
     "image": "",
     "description": "1669 watk"
-  },
-  {
-    "id": 210,
-    "name": "Mitra's Rage: Warrior",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "85 str, 1767 watk"
   },
   {
     "id": 211,
