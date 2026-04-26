@@ -354,7 +354,30 @@
     "image": "",
     "description": "201 int, 2080 matk"
   },
-
+  {
+    "id": 7004,
+    "name": "Destiny Chain",
+    "rarity": "god",
+    "class": "Thief",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "40t",
+    "seller": "",
+    "image": "",
+    "description": "1628 luk, 2267 watk"
+  },
+  {
+    "id": 7005,
+    "name": "Destiny Bow",
+    "rarity": "vvvvip",
+    "class": "Archer",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "25t",
+    "seller": "",
+    "image": "",
+    "description": "1502 dex, 1976 watk"
+  },
 
 
   {
