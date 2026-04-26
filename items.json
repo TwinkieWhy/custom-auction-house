@@ -576,18 +576,6 @@
     "description": "1925 matk"
   },
   {
-    "id": 195,
-    "name": "Arcane Symbol: Arcana",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "35t",
-    "seller": "",
-    "image": "",
-    "description": "1795 watk"
-  },
-  {
     "id": 197,
     "name": "Eternal Archer Cape",
     "rarity": "vvvvip",
