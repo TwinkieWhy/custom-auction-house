@@ -1,5 +1,165 @@
 [
   {
+    "id": 1001,
+    "name": "Eternal Knight Helm",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Armor",
+    "subType": "Hat",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "972 str, 1660 watk"
+  },
+  {
+    "id": 1001,
+    "name": "Eternal Knight Shoes",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "1033 str, 1647 watk"
+  },
+
+
+
+  
+  {
+    "id": 2001,
+    "name": "Eternal Mage Cape",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "857 int, 1763 matk"
+  },
+  {
+    "id": 2002,
+    "name": "Eternal Mage Robe",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Top",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "927 int, 1716 matk"
+  },
+  {
+    "id": 2003,
+    "name": "Eternal Mage Pants",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Pants",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "923 int, 1715 matk"
+  },
+  {
+    "id": 2004,
+    "name": "Eternal Mage Gloves",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Glove",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "1203 int, 1742 matk"
+  },
+  {
+    "id": 2005,
+    "name": "Eternal Mage Shoes",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "1020 int, 1691 matk"
+  },
+
+
+
+
+  {
+    "id": 6001,
+    "name": "Mitra's Rage: Warrior",
+    "rarity": "vvvip",
+    "class": "Warrior",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "899 str, 1495 watk"
+  },
+  {
+    "id": 6002,
+    "name": "Mitra's Rage: Magician",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "813 int, 1795 matk"
+  },
+
+
+
+
+  {
+    "id": 7001,
+    "name": "Destiny Saber",
+    "rarity": "god",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "212 str, 2182 watk"
+  },
+  {
+    "id": 7002,
+    "name": "Destiny Two-handed Sword",
+    "rarity": "vvvvip",
+    "class": "Warrior",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "1223 str, 2076 watk"
+  },
+  {
+    "id": 7003,
+    "name": "Destiny Wand",
+    "rarity": "vvvvip",
+    "class": "Mage",
+    "itemType": "Weapon",
+    "subType": "Primary",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "201 int, 2080 matk"
+  },
+
+
+
+
+  {
     "id": 8001,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvvvip",
