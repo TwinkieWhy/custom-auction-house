@@ -1,5 +1,110 @@
 [
   {
+    "id": 1001,
+    "name": "",
+    "rarity": "",
+    "class": "Warrior",
+    "itemType": "Armor",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 2001,
+    "name": "",
+    "rarity": "",
+    "class": "Mage",
+    "itemType": "Armor",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 3001,
+    "name": "",
+    "rarity": "",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 4001,
+    "name": "",
+    "rarity": "",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 5001,
+    "name": "",
+    "rarity": "",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 6001,
+    "name": "",
+    "rarity": "",
+    "class": "",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
+    "id": 7001,
+    "name": "",
+    "rarity": "",
+    "class": "",
+    "itemType": "Weapon",
+    "subType": "",
+    "price": "",
+    "seller": "",
+    "image": "",
+    "description": ""
+  },
+
+
+
+  {
     "id": 8001,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvvvip",
