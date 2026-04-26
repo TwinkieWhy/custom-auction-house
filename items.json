@@ -26,7 +26,6 @@
 
 
 
-  
   {
     "id": 2001,
     "name": "Eternal Mage Cape",
@@ -90,6 +89,170 @@
 
 
 
+  {
+    "id": 3001,
+    "name": "Eternal Thief Bandana",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Hat",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "926 luk, 1723 watk"
+  },
+  {
+    "id": 3002,
+    "name": "Eternal Thief Shirt",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Top",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "98 luk, 1718 watk"
+  },
+  {
+    "id": 3003,
+    "name": "Eternal Thief Cape",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "74 luk, 1648 watk"
+  },
+  {
+    "id": 3004,
+    "name": "Eternal Thief Gloves",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Gloves",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "822 luk, 1763 watk"
+  },
+  {
+    "id": 3005,
+    "name": "Eternal Thief Shoes",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "1051 luk, 1788 watk"
+  },
+  {
+    "id": 3006,
+    "name": "Eternal Thief Bandana",
+    "rarity": "vvvip",
+    "class": "Thief",
+    "itemType": "Armor",
+    "subType": "Hat",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "806 luk, 1523 watk"
+  },
+
+
+
+  {
+    "id": 4001,
+    "name": "Eternal Archer Hat",
+    "rarity": "vvvvip",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "Hat",
+    "price": "25t",
+    "seller": "",
+    "image": "",
+    "description": "86 dex, 1758 watk"
+  },
+  {
+    "id": 4002,
+    "name": "Eternal Archer Pants",
+    "rarity": "vvvvip",
+    "class": "Archer",
+    "itemType": "Armor",
+    "subType": "Pants",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "1085 dex, 1722 watk"
+  },
+
+
+
+  {
+    "id": 5001,
+    "name": "Eternal Pirate Hat",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "Hat",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "957 dex, 1810 watk"
+  },
+  {
+    "id": 5002,
+    "name": "Eternal Pirate Coat",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "Top",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "760 dex, 1701 watk"
+  },
+  {
+    "id": 5003,
+    "name": "Eternal Pirate Pants",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "Pants",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "940 dex, 1781 watk"
+  },
+  {
+    "id": 5004,
+    "name": "Eternal Pirate Cape",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "Cape",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "682 dex, 1625 watk"
+  },
+  {
+    "id": 5005,
+    "name": "Eternal Pirate Shoes",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Armor",
+    "subType": "Shoe",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "949 dex, 1769 watk"
+  },
+
+
 
   {
     "id": 6001,
@@ -114,6 +277,42 @@
     "seller": "",
     "image": "",
     "description": "813 int, 1795 matk"
+  },
+  {
+    "id": 6003,
+    "name": "Mitra's Rage: Thief",
+    "rarity": "vvvvip",
+    "class": "Thief",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "15t",
+    "seller": "",
+    "image": "",
+    "description": "723 luk, 1803 watk"
+  },
+  {
+    "id": 6004,
+    "name": "Mitra's Rage: Bowman",
+    "rarity": "vvvvip",
+    "class": "Archer",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "46 dex, 1760 watk"
+  },
+  {
+    "id": 6005,
+    "name": "Mitra's Rage: Thief",
+    "rarity": "vvvvip",
+    "class": "Pirate",
+    "itemType": "Emblem",
+    "subType": "Mitras",
+    "price": "10t",
+    "seller": "",
+    "image": "",
+    "description": "906 dex, 1637 watk"
   },
 
 
