@@ -12,7 +12,7 @@
     "description": "972 str, 1660 watk"
   },
   {
-    "id": 1001,
+    "id": 1002,
     "name": "Eternal Knight Shoes",
     "rarity": "vvvvip",
     "class": "Warrior",
@@ -243,18 +243,7 @@
 
 
 
-  {
-    "id": 6001,
-    "name": "Mitra's Rage: Warrior",
-    "rarity": "vvvip",
-    "class": "Warrior",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "10t",
-    "seller": "",
-    "image": "",
-    "description": "899 str, 1495 watk"
-  },
+
   {
     "id": 6002,
     "name": "Mitra's Rage: Magician",
@@ -430,18 +419,6 @@
     "seller": "",
     "image": "",
     "description": "1683 watk"
-  },
-  {
-    "id": 8008,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "vvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "15t",
-    "seller": "",
-    "image": "",
-    "description": "1567 watk"
   },
   {
     "id": 8012,
