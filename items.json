@@ -291,18 +291,6 @@
     "description": "723 luk, 1803 watk"
   },
   {
-    "id": 6004,
-    "name": "Mitra's Rage: Bowman",
-    "rarity": "vvvvip",
-    "class": "Archer",
-    "itemType": "Emblem",
-    "subType": "Mitras",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "46 dex, 1760 watk"
-  },
-  {
     "id": 6005,
     "name": "Mitra's Rage: Thief",
     "rarity": "vvvvip",
@@ -395,18 +383,6 @@
     "description": "1685 watk"
   },
   {
-    "id": 8002,
-    "name": "Arcane Symbol: Arcana",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "8t",
-    "seller": "",
-    "image": "",
-    "description": "1235 watk"
-  },
-  {
     "id": 8003,
     "name": "Arcane Symbol: Morass",
     "rarity": "vvvvip",
@@ -480,7 +456,7 @@
   },
   {
     "id": 8009,
-    "name": "Sacred Symbol: Cernium",
+    "name": "Sacred Symbol: Odium",
     "rarity": "vvvvip",
     "class": "WATK",
     "itemType": "Symbol",
@@ -501,18 +477,6 @@
     "seller": "",
     "image": "",
     "description": "1315 watk"
-  },
-  {
-    "id": 8011,
-    "name": "Sacred Symbol: Arteria",
-    "rarity": "vvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "10t",
-    "seller": "",
-    "image": "",
-    "description": "1346 watk"
   },
   {
     "id": 8012,
