@@ -361,18 +361,6 @@
     "description": "1685 watk"
   },
   {
-    "id": 8003,
-    "name": "Arcane Symbol: Morass",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1664 watk"
-  },
-  {
     "id": 8004,
     "name": "Sacred Symbol: Cernium",
     "rarity": "god",
