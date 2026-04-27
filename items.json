@@ -409,18 +409,6 @@
     "description": "1630 watk"
   },
   {
-    "id": 8007,
-    "name": "Sacred Symbol: Arcus",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1683 watk"
-  },
-  {
     "id": 8012,
     "name": "Grand Sacred Symbol: Tallahart",
     "rarity": "vvvvip",
