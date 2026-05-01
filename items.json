@@ -579,5 +579,65 @@
     "seller": "",
     "image": "",
     "description": "1938 matk"
+  },
+  {
+    "id": 9014,
+    "name": "Arcane Symbol: Vanishing Journey",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Arcane",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "1601 watk"
+  },
+  {
+    "id": 9015,
+    "name": "Arcane Symbol: Morass",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Arcane",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "1735 watk"
+  },
+  {
+    "id": 9016,
+    "name": "Sacred Symbol: Cernium",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "1756 watk"
+  },
+  {
+    "id": 9018,
+    "name": "Sacred Symbol: Odium",
+    "rarity": "god",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "60t",
+    "seller": "",
+    "image": "",
+    "description": "1840 watk"
+  },
+  {
+    "id": 9019,
+    "name": "Sacred Symbol: Odium",
+    "rarity": "god",
+    "class": "MATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "35t",
+    "seller": "",
+    "image": "",
+    "description": "1832 matk"
   }
 ]
