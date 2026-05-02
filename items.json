@@ -617,18 +617,6 @@
     "description": "1756 watk"
   },
   {
-    "id": 9018,
-    "name": "Sacred Symbol: Odium",
-    "rarity": "god",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "60t",
-    "seller": "",
-    "image": "",
-    "description": "1840 watk"
-  },
-  {
     "id": 9019,
     "name": "Sacred Symbol: Odium",
     "rarity": "god",
