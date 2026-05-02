@@ -349,18 +349,6 @@
 
 
   {
-    "id": 8004,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "god",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "70t",
-    "seller": "",
-    "image": "",
-    "description": "1898 watk"
-  },
-  {
     "id": 8005,
     "name": "Sacred Symbol: Cernium",
     "rarity": "vvvvip",
@@ -419,6 +407,42 @@
     "seller": "",
     "image": "",
     "description": "1781 watk"
+  },  
+  {
+    "id": 8001,
+    "name": "Arcane Symbol: Vanishing Journey",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Arcane",
+    "price": "20t",
+    "seller": "",
+    "image": "",
+    "description": "1601 watk"
+  },
+  {
+    "id": 8015,
+    "name": "Arcane Symbol: Morass",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Arcane",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "1735 watk"
+  },
+  {
+    "id": 8016,
+    "name": "Sacred Symbol: Cernium",
+    "rarity": "vvvvip",
+    "class": "WATK",
+    "itemType": "Symbol",
+    "subType": "Sacred",
+    "price": "30t",
+    "seller": "",
+    "image": "",
+    "description": "1756 watk"
   },
   
 
@@ -579,42 +603,6 @@
     "seller": "",
     "image": "",
     "description": "1938 matk"
-  },
-  {
-    "id": 9014,
-    "name": "Arcane Symbol: Vanishing Journey",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1601 watk"
-  },
-  {
-    "id": 9015,
-    "name": "Arcane Symbol: Morass",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1735 watk"
-  },
-  {
-    "id": 9016,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1756 watk"
   },
   {
     "id": 9019,
