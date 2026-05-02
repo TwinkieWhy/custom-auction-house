@@ -285,18 +285,6 @@
 
 
   {
-    "id": 7001,
-    "name": "Destiny Saber",
-    "rarity": "god",
-    "class": "Warrior",
-    "itemType": "Weapon",
-    "subType": "Primary",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "212 str, 2182 watk"
-  },
-  {
     "id": 7002,
     "name": "Destiny Two-handed Sword",
     "rarity": "vvvvip",
