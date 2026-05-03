@@ -349,18 +349,6 @@
     "description": "1671 watk"
   },
   {
-    "id": 8006,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1630 watk"
-  },
-  {
     "id": 8012,
     "name": "Grand Sacred Symbol: Tallahart",
     "rarity": "vvvvip",
@@ -396,30 +384,6 @@
     "image": "",
     "description": "1781 watk"
   },  
-  {
-    "id": 8001,
-    "name": "Arcane Symbol: Vanishing Journey",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1601 watk"
-  },
-  {
-    "id": 8015,
-    "name": "Arcane Symbol: Morass",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1735 watk"
-  },
   {
     "id": 8016,
     "name": "Sacred Symbol: Cernium",
