@@ -337,18 +337,6 @@
 
 
   {
-    "id": 8005,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1671 watk"
-  },
-  {
     "id": 8012,
     "name": "Grand Sacred Symbol: Tallahart",
     "rarity": "vvvvip",
@@ -384,18 +372,6 @@
     "image": "",
     "description": "1781 watk"
   },  
-  {
-    "id": 8016,
-    "name": "Sacred Symbol: Cernium",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1756 watk"
-  },
   
 
 
