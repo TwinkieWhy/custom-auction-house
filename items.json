@@ -1,17 +1,5 @@
 [
   {
-    "id": 1001,
-    "name": "Eternal Knight Helm",
-    "rarity": "vvvvip",
-    "class": "Warrior",
-    "itemType": "Armor",
-    "subType": "Hat",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "972 str, 1660 watk"
-  },
-  {
     "id": 1002,
     "name": "Eternal Knight Shoes",
     "rarity": "vvvvip",
