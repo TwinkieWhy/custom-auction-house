@@ -84,18 +84,6 @@
     "description": "1667 watk"
   },
   {
-    "id": 8008,
-    "name": "Arcane Symbol: Lachelein",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "35t",
-    "seller": "",
-    "image": "",
-    "description": "1796 watk"
-  },
-  {
     "id": 8009,
     "name": "Arcane Symbol: Arcana",
     "rarity": "vvvvip",
@@ -106,18 +94,6 @@
     "seller": "",
     "image": "",
     "description": "1603 watk"
-  },
-  {
-    "id": 8010,
-    "name": "Sacred Symbol: Arcus",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1774 watk"
   },
   {
     "id": 8011,
