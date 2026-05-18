@@ -132,18 +132,6 @@
     "description": "1882 watk"
   },
   {
-    "id": 8015,
-    "name": "Sacred Symbol: Shangri-La",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1761 watk"
-  },
-  {
     "id": 8016,
     "name": "Sacred Symbol: Shangri-La",
     "rarity": "vvvvip",
@@ -166,17 +154,5 @@
     "seller": "",
     "image": "",
     "description": "1767 watk"
-  },
-  {
-    "id": 8018,
-    "name": "Sacred Symbol: Arteria",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1696 watk"
   }
 ]
