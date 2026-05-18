@@ -1,17 +1,5 @@
 [
   {
-    "id": 8001,
-    "name": "Arcane Symbol: Vanishing Journey",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1723 watk"
-  },
-  {
     "id": 8002,
     "name": "Arcane Symbol: Chu Chu Island",
     "rarity": "god",
