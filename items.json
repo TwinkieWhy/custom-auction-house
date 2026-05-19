@@ -108,18 +108,6 @@
     "description": "1693 watk"
   },
   {
-    "id": 8013,
-    "name": "Sacred Symbol: Arcus",
-    "rarity": "god",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "70t",
-    "seller": "",
-    "image": "",
-    "description": "1870 watk"
-  },
-  {
     "id": 8014,
     "name": "Sacred Symbol: Odium",
     "rarity": "god",
