@@ -72,30 +72,6 @@
     "description": "1667 watk"
   },
   {
-    "id": 8009,
-    "name": "Arcane Symbol: Arcana",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Arcane",
-    "price": "15t",
-    "seller": "",
-    "image": "",
-    "description": "1603 watk"
-  },
-  {
-    "id": 8011,
-    "name": "Sacred Symbol: Arcus",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "20t",
-    "seller": "",
-    "image": "",
-    "description": "1672 watk"
-  },
-  {
     "id": 8012,
     "name": "Sacred Symbol: Arcus",
     "rarity": "vvvvip",
@@ -130,17 +106,5 @@
     "seller": "",
     "image": "",
     "description": "1632 watk"
-  },
-  {
-    "id": 8017,
-    "name": "Sacred Symbol: Arteria",
-    "rarity": "vvvvip",
-    "class": "WATK",
-    "itemType": "Symbol",
-    "subType": "Sacred",
-    "price": "30t",
-    "seller": "",
-    "image": "",
-    "description": "1767 watk"
   }
 ]
